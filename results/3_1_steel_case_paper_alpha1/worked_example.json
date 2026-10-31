@@ -1,0 +1,68 @@
+{
+  "demand_t_per_month": {
+    "coal": 56107.583333333336,
+    "ore": 132661.41666666666,
+    "scrap": 50861.849017356035
+  },
+  "k_counts_per_material": {
+    "coal": 4,
+    "ore": 4,
+    "scrap": 8
+  },
+  "epsilon": 0.05,
+  "accepted_calibration": {
+    "eps_cal": 0.05,
+    "k": [
+      4,
+      4,
+      8
+    ],
+    "opt_counts": [
+      4,
+      4,
+      2,
+      3,
+      3
+    ],
+    "opt_f": 0.8472827529668105,
+    "viol_cal": 0.040000000000000036,
+    "viol_val": 0.04279999999999995,
+    "cp95_upper": 0.04627939367492027,
+    "certified": true,
+    "saa_exact_counts": [
+      4,
+      4,
+      2,
+      3,
+      2
+    ],
+    "saa_exact_f": 0.8105191806572605,
+    "saa_exact_viol_val": 0.0494,
+    "saa_exact_cp95_upper": 0.05311287785252106
+  },
+  "optimal_route_counts": {
+    "H1": 4,
+    "R1": 4,
+    "R2": 2,
+    "R3": 3,
+    "R4": 3
+  },
+  "n_feasible_item_bitstrings": 60,
+  "n_optimal_item_bitstrings": 15,
+  "cost_usd": 93504620.4679541,
+  "C_ref_usd": 106348160.04047702,
+  "cost_term": 0.4396156004596856,
+  "emissions_kg": 10701769.43172,
+  "E_ref_kg": 12760518.78393,
+  "emission_term": 0.2515987699151536,
+  "risk": 0.1597097922060704,
+  "R_ref": 0.2046664283356093,
+  "risk_term": 0.15606838259197095,
+  "f": 0.8472827529668105,
+  "weights": {
+    "w_cost": 0.5,
+    "w_emit": 0.3,
+    "w_risk": 0.2
+  },
+  "check_sum_of_terms": 0.8472827529668102
+}

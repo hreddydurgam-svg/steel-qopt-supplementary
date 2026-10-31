@@ -1,0 +1,125 @@
+{
+  "environment": {
+    "python": "3.13.14",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "machine": "AMD64",
+    "processor": "AMD64 Family 25 Model 117 Stepping 2, AuthenticAMD",
+    "cpu_count": 16,
+    "time_utc": "2026-10-07T04:35:46Z",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "pandas": "3.0.6",
+    "matplotlib": "3.11.2",
+    "pulp": "2.9.0",
+    "qiskit": "2.5.2",
+    "qiskit_aer": "0.17.2",
+    "qbraid": "not installed"
+  },
+  "params_sha256": "5f80e9b0c819670e62678f2cfabfdcbeccf80ed8b31b44400f3aca635208eb2e",
+  "checks": {
+    "regression vs manuscript Tables 1-2": {
+      "status": "PASS",
+      "detail": "max dev 0.0046"
+    },
+    "XY gate vs expm": {
+      "status": "PASS",
+      "detail": ""
+    },
+    "RX mixer vs expm": {
+      "status": "PASS",
+      "detail": ""
+    },
+    "Pauli Y on qubit 0": {
+      "status": "PASS",
+      "detail": ""
+    },
+    "Pauli Y on qubit 1": {
+      "status": "PASS",
+      "detail": ""
+    },
+    "Pauli Y on qubit 2": {
+      "status": "PASS",
+      "detail": ""
+    },
+    "exact enumeration vs brute force": {
+      "status": "PASS",
+      "detail": "f*=0.248489"
+    },
+    "M2 subspace == full-space": {
+      "status": "PASS",
+      "detail": "max |diff| 4.86e-17"
+    },
+    "M2 feasibility structural": {
+      "status": "PASS",
+      "detail": ""
+    },
+    "M1 subspace == full-space": {
+      "status": "PASS",
+      "detail": "max |diff| 3.47e-17"
+    },
+    "M1 feasibility structural": {
+      "status": "PASS",
+      "detail": ""
+    },
+    "M5 norm": {
+      "status": "PASS",
+      "detail": ""
+    },
+    "M3 norm": {
+      "status": "PASS",
+      "detail": ""
+    },
+    "M3 zero-penalty states are feasible": {
+      "status": "PASS",
+      "detail": ""
+    },
+    "M3 every feasible item set has a zero-penalty encoding": {
+      "status": "PASS",
+      "detail": ""
+    },
+    "M3 min over zero-penalty states equals f*": {
+      "status": "PASS",
+      "detail": ""
+    },
+    "CVaR alpha=1 equals mean": {
+      "status": "PASS",
+      "detail": ""
+    },
+    "CVaR alpha=0.3 equals min": {
+      "status": "PASS",
+      "detail": ""
+    },
+    "INTERP p=1->2": {
+      "status": "PASS",
+      "detail": ""
+    },
+    "MILP (McCormick) == enumeration": {
+      "status": "PASS",
+      "detail": "pulp 2.9.0"
+    },
+    "Qiskit M1 circuit == numpy engine": {
+      "status": "PASS",
+      "detail": "max |diff| 3.05e-16, qiskit 2.5.2"
+    },
+    "Qiskit M2 circuit == numpy engine": {
+      "status": "PASS",
+      "detail": "max |diff| 3.61e-16, qiskit 2.5.2"
+    },
+    "Qiskit M3 circuit == numpy engine": {
+      "status": "PASS",
+      "detail": "max |diff| 2.78e-17, qiskit 2.5.2"
+    },
+    "Qiskit M4 circuit == numpy engine": {
+      "status": "PASS",
+      "detail": "max |diff| 8.33e-17, qiskit 2.5.2"
+    },
+    "Qiskit M5 circuit == numpy engine": {
+      "status": "PASS",
+      "detail": "max |diff| 1.53e-16, qiskit 2.5.2"
+    },
+    "qiskit-aer importable": {
+      "status": "PASS",
+      "detail": "qiskit-aer 0.17.2"
+    }
+  }
+}

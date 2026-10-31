@@ -1,0 +1,301 @@
+size,instance,N_items,method,p,n_qubits,angles,depth,two_qubit,one_qubit,ops,state_preparation,status
+steel,steel,18,M1,1,20,21,69,184,330,"{""rz"": 230, ""cx"": 184, ""sx"": 100}",Dicke product state (excluded),ok
+steel,steel,18,M1,2,20,42,138,368,658,"{""rz"": 460, ""cx"": 368, ""sx"": 198}",Dicke product state (excluded),ok
+steel,steel,18,M1,3,20,63,207,552,986,"{""rz"": 690, ""cx"": 552, ""sx"": 296}",Dicke product state (excluded),ok
+steel,steel,18,M1,4,20,84,276,736,1314,"{""rz"": 920, ""cx"": 736, ""sx"": 394}",Dicke product state (excluded),ok
+steel,steel,18,M2,1,20,4,69,184,330,"{""rz"": 230, ""cx"": 184, ""sx"": 100}",Dicke product state (excluded),ok
+steel,steel,18,M2,2,20,8,138,368,658,"{""rz"": 460, ""cx"": 368, ""sx"": 198}",Dicke product state (excluded),ok
+steel,steel,18,M2,3,20,12,207,552,986,"{""rz"": 690, ""cx"": 552, ""sx"": 296}",Dicke product state (excluded),ok
+steel,steel,18,M2,4,20,16,276,736,1314,"{""rz"": 920, ""cx"": 736, ""sx"": 394}",Dicke product state (excluded),ok
+steel,steel,18,M3,1,20,2,57,132,186,"{""rz"": 146, ""cx"": 132, ""sx"": 40}",H on every qubit (excluded),ok
+steel,steel,18,M3,2,20,4,92,264,352,"{""rz"": 272, ""cx"": 264, ""sx"": 80}",H on every qubit (excluded),ok
+steel,steel,18,M3,3,20,6,127,396,518,"{""rz"": 398, ""cx"": 396, ""sx"": 120}",H on every qubit (excluded),ok
+steel,steel,18,M3,4,20,8,162,528,684,"{""cx"": 528, ""rz"": 524, ""sx"": 160}",H on every qubit (excluded),ok
+steel,steel,18,M4,1,18,2,51,104,160,"{""rz"": 124, ""cx"": 104, ""sx"": 36}",H on every qubit (excluded),ok
+steel,steel,18,M4,2,18,4,83,208,302,"{""rz"": 230, ""cx"": 208, ""sx"": 72}",H on every qubit (excluded),ok
+steel,steel,18,M4,3,18,6,115,312,444,"{""rz"": 336, ""cx"": 312, ""sx"": 108}",H on every qubit (excluded),ok
+steel,steel,18,M4,4,18,8,147,416,586,"{""rz"": 442, ""cx"": 416, ""sx"": 144}",H on every qubit (excluded),ok
+steel,steel,18,M5,1,20,123,237,316,726,"{""rz"": 494, ""cx"": 316, ""sx"": 232}",X on the seed qubits (excluded),ok
+steel,steel,18,M5,2,20,246,435,632,1450,"{""rz"": 988, ""cx"": 632, ""sx"": 462}",X on the seed qubits (excluded),ok
+steel,steel,18,M5,3,20,369,633,948,2174,"{""rz"": 1482, ""cx"": 948, ""sx"": 692}",X on the seed qubits (excluded),ok
+steel,steel,18,M5,4,20,492,831,1264,2898,"{""rz"": 1976, ""cx"": 1264, ""sx"": 922}",X on the seed qubits (excluded),ok
+"[3, 3, 3]","synth(3, 3, 3)_s7000",9,M1,1,13,14,44,70,187,"{""rz"": 122, ""cx"": 70, ""sx"": 65}",Dicke product state (excluded),ok
+"[3, 3, 3]","synth(3, 3, 3)_s7000",9,M1,2,13,28,77,140,370,"{""rz"": 244, ""cx"": 140, ""sx"": 126}",Dicke product state (excluded),ok
+"[3, 3, 3]","synth(3, 3, 3)_s7000",9,M1,3,13,42,110,210,553,"{""rz"": 366, ""cx"": 210, ""sx"": 187}",Dicke product state (excluded),ok
+"[3, 3, 3]","synth(3, 3, 3)_s7000",9,M1,4,13,56,143,280,736,"{""rz"": 488, ""cx"": 280, ""sx"": 248}",Dicke product state (excluded),ok
+"[3, 3, 3]","synth(3, 3, 3)_s7000",9,M2,1,13,4,44,70,187,"{""rz"": 122, ""cx"": 70, ""sx"": 65}",Dicke product state (excluded),ok
+"[3, 3, 3]","synth(3, 3, 3)_s7000",9,M2,2,13,8,77,140,370,"{""rz"": 244, ""cx"": 140, ""sx"": 126}",Dicke product state (excluded),ok
+"[3, 3, 3]","synth(3, 3, 3)_s7000",9,M2,3,13,12,110,210,553,"{""rz"": 366, ""cx"": 210, ""sx"": 187}",Dicke product state (excluded),ok
+"[3, 3, 3]","synth(3, 3, 3)_s7000",9,M2,4,13,16,143,280,736,"{""rz"": 488, ""cx"": 280, ""sx"": 248}",Dicke product state (excluded),ok
+"[3, 3, 3]","synth(3, 3, 3)_s7000",9,M3,1,13,2,27,44,100,"{""rz"": 74, ""cx"": 44, ""sx"": 26}",H on every qubit (excluded),ok
+"[3, 3, 3]","synth(3, 3, 3)_s7000",9,M3,2,13,4,47,88,187,"{""rz"": 135, ""cx"": 88, ""sx"": 52}",H on every qubit (excluded),ok
+"[3, 3, 3]","synth(3, 3, 3)_s7000",9,M3,3,13,6,67,132,274,"{""rz"": 196, ""cx"": 132, ""sx"": 78}",H on every qubit (excluded),ok
+"[3, 3, 3]","synth(3, 3, 3)_s7000",9,M3,4,13,8,87,176,361,"{""rz"": 257, ""cx"": 176, ""sx"": 104}",H on every qubit (excluded),ok
+"[3, 3, 3]","synth(3, 3, 3)_s7000",9,M4,1,9,2,15,18,63,"{""rz"": 45, ""cx"": 18, ""sx"": 18}",H on every qubit (excluded),ok
+"[3, 3, 3]","synth(3, 3, 3)_s7000",9,M4,2,9,4,29,36,117,"{""rz"": 81, ""cx"": 36, ""sx"": 36}",H on every qubit (excluded),ok
+"[3, 3, 3]","synth(3, 3, 3)_s7000",9,M4,3,9,6,43,54,171,"{""rz"": 117, ""cx"": 54, ""sx"": 54}",H on every qubit (excluded),ok
+"[3, 3, 3]","synth(3, 3, 3)_s7000",9,M4,4,9,8,57,72,225,"{""rz"": 153, ""cx"": 72, ""sx"": 72}",H on every qubit (excluded),ok
+"[3, 3, 3]","synth(3, 3, 3)_s7000",9,M5,1,13,62,154,194,559,"{""rz"": 370, ""cx"": 194, ""sx"": 189}",X on the seed qubits (excluded),ok
+"[3, 3, 3]","synth(3, 3, 3)_s7000",9,M5,2,13,124,253,388,1114,"{""rz"": 740, ""cx"": 388, ""sx"": 374}",X on the seed qubits (excluded),ok
+"[3, 3, 3]","synth(3, 3, 3)_s7000",9,M5,3,13,186,352,582,1669,"{""rz"": 1110, ""cx"": 582, ""sx"": 559}",X on the seed qubits (excluded),ok
+"[3, 3, 3]","synth(3, 3, 3)_s7000",9,M5,4,13,248,451,776,2224,"{""rz"": 1480, ""cx"": 776, ""sx"": 744}",X on the seed qubits (excluded),ok
+"[3, 3, 3]","synth(3, 3, 3)_s7001",9,M1,1,12,13,33,66,174,"{""rz"": 114, ""cx"": 66, ""sx"": 60}",Dicke product state (excluded),ok
+"[3, 3, 3]","synth(3, 3, 3)_s7001",9,M1,2,12,26,66,132,345,"{""rz"": 228, ""cx"": 132, ""sx"": 117}",Dicke product state (excluded),ok
+"[3, 3, 3]","synth(3, 3, 3)_s7001",9,M1,3,12,39,99,198,516,"{""rz"": 342, ""cx"": 198, ""sx"": 174}",Dicke product state (excluded),ok
+"[3, 3, 3]","synth(3, 3, 3)_s7001",9,M1,4,12,52,132,264,687,"{""rz"": 456, ""cx"": 264, ""sx"": 231}",Dicke product state (excluded),ok
+"[3, 3, 3]","synth(3, 3, 3)_s7001",9,M2,1,12,4,33,66,174,"{""rz"": 114, ""cx"": 66, ""sx"": 60}",Dicke product state (excluded),ok
+"[3, 3, 3]","synth(3, 3, 3)_s7001",9,M2,2,12,8,66,132,345,"{""rz"": 228, ""cx"": 132, ""sx"": 117}",Dicke product state (excluded),ok
+"[3, 3, 3]","synth(3, 3, 3)_s7001",9,M2,3,12,12,99,198,516,"{""rz"": 342, ""cx"": 198, ""sx"": 174}",Dicke product state (excluded),ok
+"[3, 3, 3]","synth(3, 3, 3)_s7001",9,M2,4,12,16,132,264,687,"{""rz"": 456, ""cx"": 264, ""sx"": 231}",Dicke product state (excluded),ok
+"[3, 3, 3]","synth(3, 3, 3)_s7001",9,M3,1,12,2,21,36,90,"{""rz"": 66, ""cx"": 36, ""sx"": 24}",H on every qubit (excluded),ok
+"[3, 3, 3]","synth(3, 3, 3)_s7001",9,M3,2,12,4,38,72,168,"{""rz"": 120, ""cx"": 72, ""sx"": 48}",H on every qubit (excluded),ok
+"[3, 3, 3]","synth(3, 3, 3)_s7001",9,M3,3,12,6,55,108,246,"{""rz"": 174, ""cx"": 108, ""sx"": 72}",H on every qubit (excluded),ok
+"[3, 3, 3]","synth(3, 3, 3)_s7001",9,M3,4,12,8,72,144,324,"{""rz"": 228, ""cx"": 144, ""sx"": 96}",H on every qubit (excluded),ok
+"[3, 3, 3]","synth(3, 3, 3)_s7001",9,M4,1,9,2,15,18,63,"{""rz"": 45, ""cx"": 18, ""sx"": 18}",H on every qubit (excluded),ok
+"[3, 3, 3]","synth(3, 3, 3)_s7001",9,M4,2,9,4,29,36,117,"{""rz"": 81, ""cx"": 36, ""sx"": 36}",H on every qubit (excluded),ok
+"[3, 3, 3]","synth(3, 3, 3)_s7001",9,M4,3,9,6,43,54,171,"{""rz"": 117, ""cx"": 54, ""sx"": 54}",H on every qubit (excluded),ok
+"[3, 3, 3]","synth(3, 3, 3)_s7001",9,M4,4,9,8,57,72,225,"{""rz"": 153, ""cx"": 72, ""sx"": 72}",H on every qubit (excluded),ok
+"[3, 3, 3]","synth(3, 3, 3)_s7001",9,M5,1,12,53,143,158,450,"{""rz"": 298, ""cx"": 158, ""sx"": 152}",X on the seed qubits (excluded),ok
+"[3, 3, 3]","synth(3, 3, 3)_s7001",9,M5,2,12,106,242,316,897,"{""rz"": 596, ""cx"": 316, ""sx"": 301}",X on the seed qubits (excluded),ok
+"[3, 3, 3]","synth(3, 3, 3)_s7001",9,M5,3,12,159,341,474,1344,"{""rz"": 894, ""cx"": 474, ""sx"": 450}",X on the seed qubits (excluded),ok
+"[3, 3, 3]","synth(3, 3, 3)_s7001",9,M5,4,12,212,440,632,1791,"{""rz"": 1192, ""cx"": 632, ""sx"": 599}",X on the seed qubits (excluded),ok
+"[3, 3, 3]","synth(3, 3, 3)_s7002",9,M1,1,14,15,44,74,200,"{""rz"": 130, ""cx"": 74, ""sx"": 70}",Dicke product state (excluded),ok
+"[3, 3, 3]","synth(3, 3, 3)_s7002",9,M1,2,14,30,77,148,395,"{""rz"": 260, ""cx"": 148, ""sx"": 135}",Dicke product state (excluded),ok
+"[3, 3, 3]","synth(3, 3, 3)_s7002",9,M1,3,14,45,110,222,590,"{""rz"": 390, ""cx"": 222, ""sx"": 200}",Dicke product state (excluded),ok
+"[3, 3, 3]","synth(3, 3, 3)_s7002",9,M1,4,14,60,143,296,785,"{""rz"": 520, ""cx"": 296, ""sx"": 265}",Dicke product state (excluded),ok
+"[3, 3, 3]","synth(3, 3, 3)_s7002",9,M2,1,14,4,44,74,200,"{""rz"": 130, ""cx"": 74, ""sx"": 70}",Dicke product state (excluded),ok
+"[3, 3, 3]","synth(3, 3, 3)_s7002",9,M2,2,14,8,77,148,395,"{""rz"": 260, ""cx"": 148, ""sx"": 135}",Dicke product state (excluded),ok
+"[3, 3, 3]","synth(3, 3, 3)_s7002",9,M2,3,14,12,110,222,590,"{""rz"": 390, ""cx"": 222, ""sx"": 200}",Dicke product state (excluded),ok
+"[3, 3, 3]","synth(3, 3, 3)_s7002",9,M2,4,14,16,143,296,785,"{""rz"": 520, ""cx"": 296, ""sx"": 265}",Dicke product state (excluded),ok
+"[3, 3, 3]","synth(3, 3, 3)_s7002",9,M3,1,14,2,27,52,110,"{""rz"": 82, ""cx"": 52, ""sx"": 28}",H on every qubit (excluded),ok
+"[3, 3, 3]","synth(3, 3, 3)_s7002",9,M3,2,14,4,47,104,206,"{""rz"": 150, ""cx"": 104, ""sx"": 56}",H on every qubit (excluded),ok
+"[3, 3, 3]","synth(3, 3, 3)_s7002",9,M3,3,14,6,67,156,302,"{""rz"": 218, ""cx"": 156, ""sx"": 84}",H on every qubit (excluded),ok
+"[3, 3, 3]","synth(3, 3, 3)_s7002",9,M3,4,14,8,87,208,398,"{""rz"": 286, ""cx"": 208, ""sx"": 112}",H on every qubit (excluded),ok
+"[3, 3, 3]","synth(3, 3, 3)_s7002",9,M4,1,9,2,15,18,63,"{""rz"": 45, ""cx"": 18, ""sx"": 18}",H on every qubit (excluded),ok
+"[3, 3, 3]","synth(3, 3, 3)_s7002",9,M4,2,9,4,29,36,117,"{""rz"": 81, ""cx"": 36, ""sx"": 36}",H on every qubit (excluded),ok
+"[3, 3, 3]","synth(3, 3, 3)_s7002",9,M4,3,9,6,43,54,171,"{""rz"": 117, ""cx"": 54, ""sx"": 54}",H on every qubit (excluded),ok
+"[3, 3, 3]","synth(3, 3, 3)_s7002",9,M4,4,9,8,57,72,225,"{""rz"": 153, ""cx"": 72, ""sx"": 72}",H on every qubit (excluded),ok
+"[3, 3, 3]","synth(3, 3, 3)_s7002",9,M5,1,14,71,165,230,668,"{""rz"": 442, ""cx"": 230, ""sx"": 226}",X on the seed qubits (excluded),ok
+"[3, 3, 3]","synth(3, 3, 3)_s7002",9,M5,2,14,142,269,460,1331,"{""rz"": 884, ""cx"": 460, ""sx"": 447}",X on the seed qubits (excluded),ok
+"[3, 3, 3]","synth(3, 3, 3)_s7002",9,M5,3,14,213,373,690,1994,"{""rz"": 1326, ""cx"": 690, ""sx"": 668}",X on the seed qubits (excluded),ok
+"[3, 3, 3]","synth(3, 3, 3)_s7002",9,M5,4,14,284,477,920,2657,"{""rz"": 1768, ""cx"": 920, ""sx"": 889}",X on the seed qubits (excluded),ok
+"[3, 3, 3]","synth(3, 3, 3)_s7003",9,M1,1,13,14,44,70,187,"{""rz"": 122, ""cx"": 70, ""sx"": 65}",Dicke product state (excluded),ok
+"[3, 3, 3]","synth(3, 3, 3)_s7003",9,M1,2,13,28,77,140,370,"{""rz"": 244, ""cx"": 140, ""sx"": 126}",Dicke product state (excluded),ok
+"[3, 3, 3]","synth(3, 3, 3)_s7003",9,M1,3,13,42,110,210,553,"{""rz"": 366, ""cx"": 210, ""sx"": 187}",Dicke product state (excluded),ok
+"[3, 3, 3]","synth(3, 3, 3)_s7003",9,M1,4,13,56,143,280,736,"{""rz"": 488, ""cx"": 280, ""sx"": 248}",Dicke product state (excluded),ok
+"[3, 3, 3]","synth(3, 3, 3)_s7003",9,M2,1,13,4,44,70,187,"{""rz"": 122, ""cx"": 70, ""sx"": 65}",Dicke product state (excluded),ok
+"[3, 3, 3]","synth(3, 3, 3)_s7003",9,M2,2,13,8,77,140,370,"{""rz"": 244, ""cx"": 140, ""sx"": 126}",Dicke product state (excluded),ok
+"[3, 3, 3]","synth(3, 3, 3)_s7003",9,M2,3,13,12,110,210,553,"{""rz"": 366, ""cx"": 210, ""sx"": 187}",Dicke product state (excluded),ok
+"[3, 3, 3]","synth(3, 3, 3)_s7003",9,M2,4,13,16,143,280,736,"{""rz"": 488, ""cx"": 280, ""sx"": 248}",Dicke product state (excluded),ok
+"[3, 3, 3]","synth(3, 3, 3)_s7003",9,M3,1,13,2,27,44,100,"{""rz"": 74, ""cx"": 44, ""sx"": 26}",H on every qubit (excluded),ok
+"[3, 3, 3]","synth(3, 3, 3)_s7003",9,M3,2,13,4,47,88,187,"{""rz"": 135, ""cx"": 88, ""sx"": 52}",H on every qubit (excluded),ok
+"[3, 3, 3]","synth(3, 3, 3)_s7003",9,M3,3,13,6,67,132,274,"{""rz"": 196, ""cx"": 132, ""sx"": 78}",H on every qubit (excluded),ok
+"[3, 3, 3]","synth(3, 3, 3)_s7003",9,M3,4,13,8,87,176,361,"{""rz"": 257, ""cx"": 176, ""sx"": 104}",H on every qubit (excluded),ok
+"[3, 3, 3]","synth(3, 3, 3)_s7003",9,M4,1,9,2,15,18,63,"{""rz"": 45, ""cx"": 18, ""sx"": 18}",H on every qubit (excluded),ok
+"[3, 3, 3]","synth(3, 3, 3)_s7003",9,M4,2,9,4,29,36,117,"{""rz"": 81, ""cx"": 36, ""sx"": 36}",H on every qubit (excluded),ok
+"[3, 3, 3]","synth(3, 3, 3)_s7003",9,M4,3,9,6,43,54,171,"{""rz"": 117, ""cx"": 54, ""sx"": 54}",H on every qubit (excluded),ok
+"[3, 3, 3]","synth(3, 3, 3)_s7003",9,M4,4,9,8,57,72,225,"{""rz"": 153, ""cx"": 72, ""sx"": 72}",H on every qubit (excluded),ok
+"[3, 3, 3]","synth(3, 3, 3)_s7003",9,M5,1,13,62,154,194,559,"{""rz"": 370, ""cx"": 194, ""sx"": 189}",X on the seed qubits (excluded),ok
+"[3, 3, 3]","synth(3, 3, 3)_s7003",9,M5,2,13,124,253,388,1114,"{""rz"": 740, ""cx"": 388, ""sx"": 374}",X on the seed qubits (excluded),ok
+"[3, 3, 3]","synth(3, 3, 3)_s7003",9,M5,3,13,186,352,582,1669,"{""rz"": 1110, ""cx"": 582, ""sx"": 559}",X on the seed qubits (excluded),ok
+"[3, 3, 3]","synth(3, 3, 3)_s7003",9,M5,4,13,248,451,776,2224,"{""rz"": 1480, ""cx"": 776, ""sx"": 744}",X on the seed qubits (excluded),ok
+"[3, 3, 3]","synth(3, 3, 3)_s7004",9,M1,1,13,14,44,70,187,"{""rz"": 122, ""cx"": 70, ""sx"": 65}",Dicke product state (excluded),ok
+"[3, 3, 3]","synth(3, 3, 3)_s7004",9,M1,2,13,28,77,140,370,"{""rz"": 244, ""cx"": 140, ""sx"": 126}",Dicke product state (excluded),ok
+"[3, 3, 3]","synth(3, 3, 3)_s7004",9,M1,3,13,42,110,210,553,"{""rz"": 366, ""cx"": 210, ""sx"": 187}",Dicke product state (excluded),ok
+"[3, 3, 3]","synth(3, 3, 3)_s7004",9,M1,4,13,56,143,280,736,"{""rz"": 488, ""cx"": 280, ""sx"": 248}",Dicke product state (excluded),ok
+"[3, 3, 3]","synth(3, 3, 3)_s7004",9,M2,1,13,4,44,70,187,"{""rz"": 122, ""cx"": 70, ""sx"": 65}",Dicke product state (excluded),ok
+"[3, 3, 3]","synth(3, 3, 3)_s7004",9,M2,2,13,8,77,140,370,"{""rz"": 244, ""cx"": 140, ""sx"": 126}",Dicke product state (excluded),ok
+"[3, 3, 3]","synth(3, 3, 3)_s7004",9,M2,3,13,12,110,210,553,"{""rz"": 366, ""cx"": 210, ""sx"": 187}",Dicke product state (excluded),ok
+"[3, 3, 3]","synth(3, 3, 3)_s7004",9,M2,4,13,16,143,280,736,"{""rz"": 488, ""cx"": 280, ""sx"": 248}",Dicke product state (excluded),ok
+"[3, 3, 3]","synth(3, 3, 3)_s7004",9,M3,1,13,2,27,44,100,"{""rz"": 74, ""cx"": 44, ""sx"": 26}",H on every qubit (excluded),ok
+"[3, 3, 3]","synth(3, 3, 3)_s7004",9,M3,2,13,4,47,88,187,"{""rz"": 135, ""cx"": 88, ""sx"": 52}",H on every qubit (excluded),ok
+"[3, 3, 3]","synth(3, 3, 3)_s7004",9,M3,3,13,6,67,132,274,"{""rz"": 196, ""cx"": 132, ""sx"": 78}",H on every qubit (excluded),ok
+"[3, 3, 3]","synth(3, 3, 3)_s7004",9,M3,4,13,8,87,176,361,"{""rz"": 257, ""cx"": 176, ""sx"": 104}",H on every qubit (excluded),ok
+"[3, 3, 3]","synth(3, 3, 3)_s7004",9,M4,1,9,2,15,18,63,"{""rz"": 45, ""cx"": 18, ""sx"": 18}",H on every qubit (excluded),ok
+"[3, 3, 3]","synth(3, 3, 3)_s7004",9,M4,2,9,4,29,36,117,"{""rz"": 81, ""cx"": 36, ""sx"": 36}",H on every qubit (excluded),ok
+"[3, 3, 3]","synth(3, 3, 3)_s7004",9,M4,3,9,6,43,54,171,"{""rz"": 117, ""cx"": 54, ""sx"": 54}",H on every qubit (excluded),ok
+"[3, 3, 3]","synth(3, 3, 3)_s7004",9,M4,4,9,8,57,72,225,"{""rz"": 153, ""cx"": 72, ""sx"": 72}",H on every qubit (excluded),ok
+"[3, 3, 3]","synth(3, 3, 3)_s7004",9,M5,1,13,62,154,194,559,"{""rz"": 370, ""cx"": 194, ""sx"": 189}",X on the seed qubits (excluded),ok
+"[3, 3, 3]","synth(3, 3, 3)_s7004",9,M5,2,13,124,253,388,1114,"{""rz"": 740, ""cx"": 388, ""sx"": 374}",X on the seed qubits (excluded),ok
+"[3, 3, 3]","synth(3, 3, 3)_s7004",9,M5,3,13,186,352,582,1669,"{""rz"": 1110, ""cx"": 582, ""sx"": 559}",X on the seed qubits (excluded),ok
+"[3, 3, 3]","synth(3, 3, 3)_s7004",9,M5,4,13,248,451,776,2224,"{""rz"": 1480, ""cx"": 776, ""sx"": 744}",X on the seed qubits (excluded),ok
+"[4, 4, 4]","synth(4, 4, 4)_s7100",12,M1,1,18,19,47,108,264,"{""rz"": 174, ""cx"": 108, ""sx"": 90}",Dicke product state (excluded),ok
+"[4, 4, 4]","synth(4, 4, 4)_s7100",12,M1,2,18,38,88,216,522,"{""rz"": 348, ""cx"": 216, ""sx"": 174}",Dicke product state (excluded),ok
+"[4, 4, 4]","synth(4, 4, 4)_s7100",12,M1,3,18,57,129,324,780,"{""rz"": 522, ""cx"": 324, ""sx"": 258}",Dicke product state (excluded),ok
+"[4, 4, 4]","synth(4, 4, 4)_s7100",12,M1,4,18,76,170,432,1038,"{""rz"": 696, ""cx"": 432, ""sx"": 342}",Dicke product state (excluded),ok
+"[4, 4, 4]","synth(4, 4, 4)_s7100",12,M2,1,18,4,47,108,264,"{""rz"": 174, ""cx"": 108, ""sx"": 90}",Dicke product state (excluded),ok
+"[4, 4, 4]","synth(4, 4, 4)_s7100",12,M2,2,18,8,88,216,522,"{""rz"": 348, ""cx"": 216, ""sx"": 174}",Dicke product state (excluded),ok
+"[4, 4, 4]","synth(4, 4, 4)_s7100",12,M2,3,18,12,129,324,780,"{""rz"": 522, ""cx"": 324, ""sx"": 258}",Dicke product state (excluded),ok
+"[4, 4, 4]","synth(4, 4, 4)_s7100",12,M2,4,18,16,170,432,1038,"{""rz"": 696, ""cx"": 432, ""sx"": 342}",Dicke product state (excluded),ok
+"[4, 4, 4]","synth(4, 4, 4)_s7100",12,M3,1,17,2,33,80,142,"{""rz"": 108, ""cx"": 80, ""sx"": 34}",H on every qubit (excluded),ok
+"[4, 4, 4]","synth(4, 4, 4)_s7100",12,M3,2,17,4,56,160,267,"{""rz"": 199, ""cx"": 160, ""sx"": 68}",H on every qubit (excluded),ok
+"[4, 4, 4]","synth(4, 4, 4)_s7100",12,M3,3,17,6,79,240,392,"{""rz"": 290, ""cx"": 240, ""sx"": 102}",H on every qubit (excluded),ok
+"[4, 4, 4]","synth(4, 4, 4)_s7100",12,M3,4,17,8,102,320,517,"{""rz"": 381, ""cx"": 320, ""sx"": 136}",H on every qubit (excluded),ok
+"[4, 4, 4]","synth(4, 4, 4)_s7100",12,M4,1,12,2,21,36,90,"{""rz"": 66, ""cx"": 36, ""sx"": 24}",H on every qubit (excluded),ok
+"[4, 4, 4]","synth(4, 4, 4)_s7100",12,M4,2,12,4,38,72,168,"{""rz"": 120, ""cx"": 72, ""sx"": 48}",H on every qubit (excluded),ok
+"[4, 4, 4]","synth(4, 4, 4)_s7100",12,M4,3,12,6,55,108,246,"{""rz"": 174, ""cx"": 108, ""sx"": 72}",H on every qubit (excluded),ok
+"[4, 4, 4]","synth(4, 4, 4)_s7100",12,M4,4,12,8,72,144,324,"{""rz"": 228, ""cx"": 144, ""sx"": 96}",H on every qubit (excluded),ok
+"[4, 4, 4]","synth(4, 4, 4)_s7100",12,M5,1,18,113,212,368,1044,"{""rz"": 694, ""cx"": 368, ""sx"": 350}",X on the seed qubits (excluded),ok
+"[4, 4, 4]","synth(4, 4, 4)_s7100",12,M5,2,18,226,344,736,2082,"{""rz"": 1388, ""cx"": 736, ""sx"": 694}",X on the seed qubits (excluded),ok
+"[4, 4, 4]","synth(4, 4, 4)_s7100",12,M5,3,18,339,476,1104,3120,"{""rz"": 2082, ""cx"": 1104, ""sx"": 1038}",X on the seed qubits (excluded),ok
+"[4, 4, 4]","synth(4, 4, 4)_s7100",12,M5,4,18,452,608,1472,4158,"{""rz"": 2776, ""cx"": 1472, ""sx"": 1382}",X on the seed qubits (excluded),ok
+"[4, 4, 4]","synth(4, 4, 4)_s7101",12,M1,1,18,19,47,108,264,"{""rz"": 174, ""cx"": 108, ""sx"": 90}",Dicke product state (excluded),ok
+"[4, 4, 4]","synth(4, 4, 4)_s7101",12,M1,2,18,38,88,216,522,"{""rz"": 348, ""cx"": 216, ""sx"": 174}",Dicke product state (excluded),ok
+"[4, 4, 4]","synth(4, 4, 4)_s7101",12,M1,3,18,57,129,324,780,"{""rz"": 522, ""cx"": 324, ""sx"": 258}",Dicke product state (excluded),ok
+"[4, 4, 4]","synth(4, 4, 4)_s7101",12,M1,4,18,76,170,432,1038,"{""rz"": 696, ""cx"": 432, ""sx"": 342}",Dicke product state (excluded),ok
+"[4, 4, 4]","synth(4, 4, 4)_s7101",12,M2,1,18,4,47,108,264,"{""rz"": 174, ""cx"": 108, ""sx"": 90}",Dicke product state (excluded),ok
+"[4, 4, 4]","synth(4, 4, 4)_s7101",12,M2,2,18,8,88,216,522,"{""rz"": 348, ""cx"": 216, ""sx"": 174}",Dicke product state (excluded),ok
+"[4, 4, 4]","synth(4, 4, 4)_s7101",12,M2,3,18,12,129,324,780,"{""rz"": 522, ""cx"": 324, ""sx"": 258}",Dicke product state (excluded),ok
+"[4, 4, 4]","synth(4, 4, 4)_s7101",12,M2,4,18,16,170,432,1038,"{""rz"": 696, ""cx"": 432, ""sx"": 342}",Dicke product state (excluded),ok
+"[4, 4, 4]","synth(4, 4, 4)_s7101",12,M3,1,17,2,33,80,142,"{""rz"": 108, ""cx"": 80, ""sx"": 34}",H on every qubit (excluded),ok
+"[4, 4, 4]","synth(4, 4, 4)_s7101",12,M3,2,17,4,56,160,267,"{""rz"": 199, ""cx"": 160, ""sx"": 68}",H on every qubit (excluded),ok
+"[4, 4, 4]","synth(4, 4, 4)_s7101",12,M3,3,17,6,79,240,392,"{""rz"": 290, ""cx"": 240, ""sx"": 102}",H on every qubit (excluded),ok
+"[4, 4, 4]","synth(4, 4, 4)_s7101",12,M3,4,17,8,102,320,517,"{""rz"": 381, ""cx"": 320, ""sx"": 136}",H on every qubit (excluded),ok
+"[4, 4, 4]","synth(4, 4, 4)_s7101",12,M4,1,12,2,21,36,90,"{""rz"": 66, ""cx"": 36, ""sx"": 24}",H on every qubit (excluded),ok
+"[4, 4, 4]","synth(4, 4, 4)_s7101",12,M4,2,12,4,38,72,168,"{""rz"": 120, ""cx"": 72, ""sx"": 48}",H on every qubit (excluded),ok
+"[4, 4, 4]","synth(4, 4, 4)_s7101",12,M4,3,12,6,55,108,246,"{""rz"": 174, ""cx"": 108, ""sx"": 72}",H on every qubit (excluded),ok
+"[4, 4, 4]","synth(4, 4, 4)_s7101",12,M4,4,12,8,72,144,324,"{""rz"": 228, ""cx"": 144, ""sx"": 96}",H on every qubit (excluded),ok
+"[4, 4, 4]","synth(4, 4, 4)_s7101",12,M5,1,18,113,212,368,1044,"{""rz"": 694, ""cx"": 368, ""sx"": 350}",X on the seed qubits (excluded),ok
+"[4, 4, 4]","synth(4, 4, 4)_s7101",12,M5,2,18,226,344,736,2082,"{""rz"": 1388, ""cx"": 736, ""sx"": 694}",X on the seed qubits (excluded),ok
+"[4, 4, 4]","synth(4, 4, 4)_s7101",12,M5,3,18,339,476,1104,3120,"{""rz"": 2082, ""cx"": 1104, ""sx"": 1038}",X on the seed qubits (excluded),ok
+"[4, 4, 4]","synth(4, 4, 4)_s7101",12,M5,4,18,452,608,1472,4158,"{""rz"": 2776, ""cx"": 1472, ""sx"": 1382}",X on the seed qubits (excluded),ok
+"[4, 4, 4]","synth(4, 4, 4)_s7102",12,M1,1,19,20,47,112,277,"{""rz"": 182, ""cx"": 112, ""sx"": 95}",Dicke product state (excluded),ok
+"[4, 4, 4]","synth(4, 4, 4)_s7102",12,M1,2,19,40,88,224,547,"{""rz"": 364, ""cx"": 224, ""sx"": 183}",Dicke product state (excluded),ok
+"[4, 4, 4]","synth(4, 4, 4)_s7102",12,M1,3,19,60,129,336,817,"{""rz"": 546, ""cx"": 336, ""sx"": 271}",Dicke product state (excluded),ok
+"[4, 4, 4]","synth(4, 4, 4)_s7102",12,M1,4,19,80,170,448,1087,"{""rz"": 728, ""cx"": 448, ""sx"": 359}",Dicke product state (excluded),ok
+"[4, 4, 4]","synth(4, 4, 4)_s7102",12,M2,1,19,4,47,112,277,"{""rz"": 182, ""cx"": 112, ""sx"": 95}",Dicke product state (excluded),ok
+"[4, 4, 4]","synth(4, 4, 4)_s7102",12,M2,2,19,8,88,224,547,"{""rz"": 364, ""cx"": 224, ""sx"": 183}",Dicke product state (excluded),ok
+"[4, 4, 4]","synth(4, 4, 4)_s7102",12,M2,3,19,12,129,336,817,"{""rz"": 546, ""cx"": 336, ""sx"": 271}",Dicke product state (excluded),ok
+"[4, 4, 4]","synth(4, 4, 4)_s7102",12,M2,4,19,16,170,448,1087,"{""rz"": 728, ""cx"": 448, ""sx"": 359}",Dicke product state (excluded),ok
+"[4, 4, 4]","synth(4, 4, 4)_s7102",12,M3,1,17,2,33,80,142,"{""rz"": 108, ""cx"": 80, ""sx"": 34}",H on every qubit (excluded),ok
+"[4, 4, 4]","synth(4, 4, 4)_s7102",12,M3,2,17,4,56,160,267,"{""rz"": 199, ""cx"": 160, ""sx"": 68}",H on every qubit (excluded),ok
+"[4, 4, 4]","synth(4, 4, 4)_s7102",12,M3,3,17,6,79,240,392,"{""rz"": 290, ""cx"": 240, ""sx"": 102}",H on every qubit (excluded),ok
+"[4, 4, 4]","synth(4, 4, 4)_s7102",12,M3,4,17,8,102,320,517,"{""rz"": 381, ""cx"": 320, ""sx"": 136}",H on every qubit (excluded),ok
+"[4, 4, 4]","synth(4, 4, 4)_s7102",12,M4,1,12,2,21,36,90,"{""rz"": 66, ""cx"": 36, ""sx"": 24}",H on every qubit (excluded),ok
+"[4, 4, 4]","synth(4, 4, 4)_s7102",12,M4,2,12,4,38,72,168,"{""rz"": 120, ""cx"": 72, ""sx"": 48}",H on every qubit (excluded),ok
+"[4, 4, 4]","synth(4, 4, 4)_s7102",12,M4,3,12,6,55,108,246,"{""rz"": 174, ""cx"": 108, ""sx"": 72}",H on every qubit (excluded),ok
+"[4, 4, 4]","synth(4, 4, 4)_s7102",12,M4,4,12,8,72,144,324,"{""rz"": 228, ""cx"": 144, ""sx"": 96}",H on every qubit (excluded),ok
+"[4, 4, 4]","synth(4, 4, 4)_s7102",12,M5,1,19,125,223,416,1189,"{""rz"": 790, ""cx"": 416, ""sx"": 399}",X on the seed qubits (excluded),ok
+"[4, 4, 4]","synth(4, 4, 4)_s7102",12,M5,2,19,250,360,832,2371,"{""rz"": 1580, ""cx"": 832, ""sx"": 791}",X on the seed qubits (excluded),ok
+"[4, 4, 4]","synth(4, 4, 4)_s7102",12,M5,3,19,375,497,1248,3553,"{""rz"": 2370, ""cx"": 1248, ""sx"": 1183}",X on the seed qubits (excluded),ok
+"[4, 4, 4]","synth(4, 4, 4)_s7102",12,M5,4,19,500,634,1664,4735,"{""rz"": 3160, ""cx"": 1664, ""sx"": 1575}",X on the seed qubits (excluded),ok
+"[4, 4, 4]","synth(4, 4, 4)_s7103",12,M1,1,20,21,47,116,290,"{""rz"": 190, ""cx"": 116, ""sx"": 100}",Dicke product state (excluded),ok
+"[4, 4, 4]","synth(4, 4, 4)_s7103",12,M1,2,20,42,86,232,572,"{""rz"": 380, ""cx"": 232, ""sx"": 192}",Dicke product state (excluded),ok
+"[4, 4, 4]","synth(4, 4, 4)_s7103",12,M1,3,20,63,125,348,854,"{""rz"": 570, ""cx"": 348, ""sx"": 284}",Dicke product state (excluded),ok
+"[4, 4, 4]","synth(4, 4, 4)_s7103",12,M1,4,20,84,164,464,1136,"{""rz"": 760, ""cx"": 464, ""sx"": 376}",Dicke product state (excluded),ok
+"[4, 4, 4]","synth(4, 4, 4)_s7103",12,M2,1,20,4,47,116,290,"{""rz"": 190, ""cx"": 116, ""sx"": 100}",Dicke product state (excluded),ok
+"[4, 4, 4]","synth(4, 4, 4)_s7103",12,M2,2,20,8,86,232,572,"{""rz"": 380, ""cx"": 232, ""sx"": 192}",Dicke product state (excluded),ok
+"[4, 4, 4]","synth(4, 4, 4)_s7103",12,M2,3,20,12,125,348,854,"{""rz"": 570, ""cx"": 348, ""sx"": 284}",Dicke product state (excluded),ok
+"[4, 4, 4]","synth(4, 4, 4)_s7103",12,M2,4,20,16,164,464,1136,"{""rz"": 760, ""cx"": 464, ""sx"": 376}",Dicke product state (excluded),ok
+"[4, 4, 4]","synth(4, 4, 4)_s7103",12,M3,1,18,2,33,90,153,"{""rz"": 117, ""cx"": 90, ""sx"": 36}",H on every qubit (excluded),ok
+"[4, 4, 4]","synth(4, 4, 4)_s7103",12,M3,2,18,4,56,180,288,"{""rz"": 216, ""cx"": 180, ""sx"": 72}",H on every qubit (excluded),ok
+"[4, 4, 4]","synth(4, 4, 4)_s7103",12,M3,3,18,6,79,270,423,"{""rz"": 315, ""cx"": 270, ""sx"": 108}",H on every qubit (excluded),ok
+"[4, 4, 4]","synth(4, 4, 4)_s7103",12,M3,4,18,8,102,360,558,"{""rz"": 414, ""cx"": 360, ""sx"": 144}",H on every qubit (excluded),ok
+"[4, 4, 4]","synth(4, 4, 4)_s7103",12,M4,1,12,2,21,36,90,"{""rz"": 66, ""cx"": 36, ""sx"": 24}",H on every qubit (excluded),ok
+"[4, 4, 4]","synth(4, 4, 4)_s7103",12,M4,2,12,4,38,72,168,"{""rz"": 120, ""cx"": 72, ""sx"": 48}",H on every qubit (excluded),ok
+"[4, 4, 4]","synth(4, 4, 4)_s7103",12,M4,3,12,6,55,108,246,"{""rz"": 174, ""cx"": 108, ""sx"": 72}",H on every qubit (excluded),ok
+"[4, 4, 4]","synth(4, 4, 4)_s7103",12,M4,4,12,8,72,144,324,"{""rz"": 228, ""cx"": 144, ""sx"": 96}",H on every qubit (excluded),ok
+"[4, 4, 4]","synth(4, 4, 4)_s7103",12,M5,1,20,137,234,464,1334,"{""rz"": 886, ""cx"": 464, ""sx"": 448}",X on the seed qubits (excluded),ok
+"[4, 4, 4]","synth(4, 4, 4)_s7103",12,M5,2,20,274,382,928,2660,"{""rz"": 1772, ""cx"": 928, ""sx"": 888}",X on the seed qubits (excluded),ok
+"[4, 4, 4]","synth(4, 4, 4)_s7103",12,M5,3,20,411,530,1392,3986,"{""rz"": 2658, ""cx"": 1392, ""sx"": 1328}",X on the seed qubits (excluded),ok
+"[4, 4, 4]","synth(4, 4, 4)_s7103",12,M5,4,20,548,678,1856,5312,"{""rz"": 3544, ""cx"": 1856, ""sx"": 1768}",X on the seed qubits (excluded),ok
+"[4, 4, 4]","synth(4, 4, 4)_s7104",12,M1,1,18,19,47,108,264,"{""rz"": 174, ""cx"": 108, ""sx"": 90}",Dicke product state (excluded),ok
+"[4, 4, 4]","synth(4, 4, 4)_s7104",12,M1,2,18,38,88,216,522,"{""rz"": 348, ""cx"": 216, ""sx"": 174}",Dicke product state (excluded),ok
+"[4, 4, 4]","synth(4, 4, 4)_s7104",12,M1,3,18,57,129,324,780,"{""rz"": 522, ""cx"": 324, ""sx"": 258}",Dicke product state (excluded),ok
+"[4, 4, 4]","synth(4, 4, 4)_s7104",12,M1,4,18,76,170,432,1038,"{""rz"": 696, ""cx"": 432, ""sx"": 342}",Dicke product state (excluded),ok
+"[4, 4, 4]","synth(4, 4, 4)_s7104",12,M2,1,18,4,47,108,264,"{""rz"": 174, ""cx"": 108, ""sx"": 90}",Dicke product state (excluded),ok
+"[4, 4, 4]","synth(4, 4, 4)_s7104",12,M2,2,18,8,88,216,522,"{""rz"": 348, ""cx"": 216, ""sx"": 174}",Dicke product state (excluded),ok
+"[4, 4, 4]","synth(4, 4, 4)_s7104",12,M2,3,18,12,129,324,780,"{""rz"": 522, ""cx"": 324, ""sx"": 258}",Dicke product state (excluded),ok
+"[4, 4, 4]","synth(4, 4, 4)_s7104",12,M2,4,18,16,170,432,1038,"{""rz"": 696, ""cx"": 432, ""sx"": 342}",Dicke product state (excluded),ok
+"[4, 4, 4]","synth(4, 4, 4)_s7104",12,M3,1,17,2,33,80,142,"{""rz"": 108, ""cx"": 80, ""sx"": 34}",H on every qubit (excluded),ok
+"[4, 4, 4]","synth(4, 4, 4)_s7104",12,M3,2,17,4,56,160,267,"{""rz"": 199, ""cx"": 160, ""sx"": 68}",H on every qubit (excluded),ok
+"[4, 4, 4]","synth(4, 4, 4)_s7104",12,M3,3,17,6,79,240,392,"{""rz"": 290, ""cx"": 240, ""sx"": 102}",H on every qubit (excluded),ok
+"[4, 4, 4]","synth(4, 4, 4)_s7104",12,M3,4,17,8,102,320,517,"{""rz"": 381, ""cx"": 320, ""sx"": 136}",H on every qubit (excluded),ok
+"[4, 4, 4]","synth(4, 4, 4)_s7104",12,M4,1,12,2,21,36,90,"{""rz"": 66, ""cx"": 36, ""sx"": 24}",H on every qubit (excluded),ok
+"[4, 4, 4]","synth(4, 4, 4)_s7104",12,M4,2,12,4,38,72,168,"{""rz"": 120, ""cx"": 72, ""sx"": 48}",H on every qubit (excluded),ok
+"[4, 4, 4]","synth(4, 4, 4)_s7104",12,M4,3,12,6,55,108,246,"{""rz"": 174, ""cx"": 108, ""sx"": 72}",H on every qubit (excluded),ok
+"[4, 4, 4]","synth(4, 4, 4)_s7104",12,M4,4,12,8,72,144,324,"{""rz"": 228, ""cx"": 144, ""sx"": 96}",H on every qubit (excluded),ok
+"[4, 4, 4]","synth(4, 4, 4)_s7104",12,M5,1,18,113,212,368,1044,"{""rz"": 694, ""cx"": 368, ""sx"": 350}",X on the seed qubits (excluded),ok
+"[4, 4, 4]","synth(4, 4, 4)_s7104",12,M5,2,18,226,344,736,2082,"{""rz"": 1388, ""cx"": 736, ""sx"": 694}",X on the seed qubits (excluded),ok
+"[4, 4, 4]","synth(4, 4, 4)_s7104",12,M5,3,18,339,476,1104,3120,"{""rz"": 2082, ""cx"": 1104, ""sx"": 1038}",X on the seed qubits (excluded),ok
+"[4, 4, 4]","synth(4, 4, 4)_s7104",12,M5,4,18,452,608,1472,4158,"{""rz"": 2776, ""cx"": 1472, ""sx"": 1382}",X on the seed qubits (excluded),ok
+"[5, 5, 5]","synth(5, 5, 5)_s7200",15,M1,1,20,21,45,140,305,"{""rz"": 205, ""cx"": 140, ""sx"": 100}",Dicke product state (excluded),ok
+"[5, 5, 5]","synth(5, 5, 5)_s7200",15,M1,2,20,42,90,280,605,"{""rz"": 410, ""cx"": 280, ""sx"": 195}",Dicke product state (excluded),ok
+"[5, 5, 5]","synth(5, 5, 5)_s7200",15,M1,3,20,63,135,420,905,"{""rz"": 615, ""cx"": 420, ""sx"": 290}",Dicke product state (excluded),ok
+"[5, 5, 5]","synth(5, 5, 5)_s7200",15,M1,4,20,84,180,560,1205,"{""rz"": 820, ""cx"": 560, ""sx"": 385}",Dicke product state (excluded),ok
+"[5, 5, 5]","synth(5, 5, 5)_s7200",15,M2,1,20,4,45,140,305,"{""rz"": 205, ""cx"": 140, ""sx"": 100}",Dicke product state (excluded),ok
+"[5, 5, 5]","synth(5, 5, 5)_s7200",15,M2,2,20,8,90,280,605,"{""rz"": 410, ""cx"": 280, ""sx"": 195}",Dicke product state (excluded),ok
+"[5, 5, 5]","synth(5, 5, 5)_s7200",15,M2,3,20,12,135,420,905,"{""rz"": 615, ""cx"": 420, ""sx"": 290}",Dicke product state (excluded),ok
+"[5, 5, 5]","synth(5, 5, 5)_s7200",15,M2,4,20,16,180,560,1205,"{""rz"": 820, ""cx"": 560, ""sx"": 385}",Dicke product state (excluded),ok
+"[5, 5, 5]","synth(5, 5, 5)_s7200",15,M4,1,15,2,27,60,120,"{""rz"": 90, ""cx"": 60, ""sx"": 30}",H on every qubit (excluded),ok
+"[5, 5, 5]","synth(5, 5, 5)_s7200",15,M4,2,15,4,47,120,225,"{""rz"": 165, ""cx"": 120, ""sx"": 60}",H on every qubit (excluded),ok
+"[5, 5, 5]","synth(5, 5, 5)_s7200",15,M4,3,15,6,67,180,330,"{""rz"": 240, ""cx"": 180, ""sx"": 90}",H on every qubit (excluded),ok
+"[5, 5, 5]","synth(5, 5, 5)_s7200",15,M4,4,15,8,87,240,435,"{""rz"": 315, ""cx"": 240, ""sx"": 120}",H on every qubit (excluded),ok
+"[5, 5, 5]","synth(5, 5, 5)_s7200",15,M5,1,20,134,237,416,1133,"{""rz"": 757, ""cx"": 416, ""sx"": 376}",X on the seed qubits (excluded),ok
+"[5, 5, 5]","synth(5, 5, 5)_s7200",15,M5,2,20,268,402,832,2261,"{""rz"": 1514, ""cx"": 832, ""sx"": 747}",X on the seed qubits (excluded),ok
+"[5, 5, 5]","synth(5, 5, 5)_s7200",15,M5,3,20,402,567,1248,3389,"{""rz"": 2271, ""cx"": 1248, ""sx"": 1118}",X on the seed qubits (excluded),ok
+"[5, 5, 5]","synth(5, 5, 5)_s7200",15,M5,4,20,536,732,1664,4517,"{""rz"": 3028, ""cx"": 1664, ""sx"": 1489}",X on the seed qubits (excluded),ok
+"[5, 5, 5]","synth(5, 5, 5)_s7201",15,M1,1,20,21,50,140,305,"{""rz"": 205, ""cx"": 140, ""sx"": 100}",Dicke product state (excluded),ok
+"[5, 5, 5]","synth(5, 5, 5)_s7201",15,M1,2,20,42,95,280,605,"{""rz"": 410, ""cx"": 280, ""sx"": 195}",Dicke product state (excluded),ok
+"[5, 5, 5]","synth(5, 5, 5)_s7201",15,M1,3,20,63,140,420,905,"{""rz"": 615, ""cx"": 420, ""sx"": 290}",Dicke product state (excluded),ok
+"[5, 5, 5]","synth(5, 5, 5)_s7201",15,M1,4,20,84,185,560,1205,"{""rz"": 820, ""cx"": 560, ""sx"": 385}",Dicke product state (excluded),ok
+"[5, 5, 5]","synth(5, 5, 5)_s7201",15,M2,1,20,4,50,140,305,"{""rz"": 205, ""cx"": 140, ""sx"": 100}",Dicke product state (excluded),ok
+"[5, 5, 5]","synth(5, 5, 5)_s7201",15,M2,2,20,8,95,280,605,"{""rz"": 410, ""cx"": 280, ""sx"": 195}",Dicke product state (excluded),ok
+"[5, 5, 5]","synth(5, 5, 5)_s7201",15,M2,3,20,12,140,420,905,"{""rz"": 615, ""cx"": 420, ""sx"": 290}",Dicke product state (excluded),ok
+"[5, 5, 5]","synth(5, 5, 5)_s7201",15,M2,4,20,16,185,560,1205,"{""rz"": 820, ""cx"": 560, ""sx"": 385}",Dicke product state (excluded),ok
+"[5, 5, 5]","synth(5, 5, 5)_s7201",15,M4,1,15,2,27,60,120,"{""rz"": 90, ""cx"": 60, ""sx"": 30}",H on every qubit (excluded),ok
+"[5, 5, 5]","synth(5, 5, 5)_s7201",15,M4,2,15,4,47,120,225,"{""rz"": 165, ""cx"": 120, ""sx"": 60}",H on every qubit (excluded),ok
+"[5, 5, 5]","synth(5, 5, 5)_s7201",15,M4,3,15,6,67,180,330,"{""rz"": 240, ""cx"": 180, ""sx"": 90}",H on every qubit (excluded),ok
+"[5, 5, 5]","synth(5, 5, 5)_s7201",15,M4,4,15,8,87,240,435,"{""rz"": 315, ""cx"": 240, ""sx"": 120}",H on every qubit (excluded),ok
+"[5, 5, 5]","synth(5, 5, 5)_s7201",15,M5,1,20,134,237,416,1133,"{""rz"": 757, ""cx"": 416, ""sx"": 376}",X on the seed qubits (excluded),ok
+"[5, 5, 5]","synth(5, 5, 5)_s7201",15,M5,2,20,268,402,832,2261,"{""rz"": 1514, ""cx"": 832, ""sx"": 747}",X on the seed qubits (excluded),ok
+"[5, 5, 5]","synth(5, 5, 5)_s7201",15,M5,3,20,402,567,1248,3389,"{""rz"": 2271, ""cx"": 1248, ""sx"": 1118}",X on the seed qubits (excluded),ok
+"[5, 5, 5]","synth(5, 5, 5)_s7201",15,M5,4,20,536,732,1664,4517,"{""rz"": 3028, ""cx"": 1664, ""sx"": 1489}",X on the seed qubits (excluded),ok
+"[5, 5, 5]","synth(5, 5, 5)_s7202",15,M1,1,22,23,50,148,331,"{""rz"": 221, ""cx"": 148, ""sx"": 110}",Dicke product state (excluded),ok
+"[5, 5, 5]","synth(5, 5, 5)_s7202",15,M1,2,22,46,95,296,655,"{""rz"": 442, ""cx"": 296, ""sx"": 213}",Dicke product state (excluded),ok
+"[5, 5, 5]","synth(5, 5, 5)_s7202",15,M1,3,22,69,140,444,979,"{""rz"": 663, ""cx"": 444, ""sx"": 316}",Dicke product state (excluded),ok
+"[5, 5, 5]","synth(5, 5, 5)_s7202",15,M1,4,22,92,185,592,1303,"{""rz"": 884, ""cx"": 592, ""sx"": 419}",Dicke product state (excluded),ok
+"[5, 5, 5]","synth(5, 5, 5)_s7202",15,M2,1,22,4,50,148,331,"{""rz"": 221, ""cx"": 148, ""sx"": 110}",Dicke product state (excluded),ok
+"[5, 5, 5]","synth(5, 5, 5)_s7202",15,M2,2,22,8,95,296,655,"{""rz"": 442, ""cx"": 296, ""sx"": 213}",Dicke product state (excluded),ok
+"[5, 5, 5]","synth(5, 5, 5)_s7202",15,M2,3,22,12,140,444,979,"{""rz"": 663, ""cx"": 444, ""sx"": 316}",Dicke product state (excluded),ok
+"[5, 5, 5]","synth(5, 5, 5)_s7202",15,M2,4,22,16,185,592,1303,"{""rz"": 884, ""cx"": 592, ""sx"": 419}",Dicke product state (excluded),ok
+"[5, 5, 5]","synth(5, 5, 5)_s7202",15,M4,1,15,2,27,60,120,"{""rz"": 90, ""cx"": 60, ""sx"": 30}",H on every qubit (excluded),ok
+"[5, 5, 5]","synth(5, 5, 5)_s7202",15,M4,2,15,4,47,120,225,"{""rz"": 165, ""cx"": 120, ""sx"": 60}",H on every qubit (excluded),ok
+"[5, 5, 5]","synth(5, 5, 5)_s7202",15,M4,3,15,6,67,180,330,"{""rz"": 240, ""cx"": 180, ""sx"": 90}",H on every qubit (excluded),ok
+"[5, 5, 5]","synth(5, 5, 5)_s7202",15,M4,4,15,8,87,240,435,"{""rz"": 315, ""cx"": 240, ""sx"": 120}",H on every qubit (excluded),ok
+"[5, 5, 5]","synth(5, 5, 5)_s7202",15,M5,1,22,164,259,536,1495,"{""rz"": 997, ""cx"": 536, ""sx"": 498}",X on the seed qubits (excluded),ok
+"[5, 5, 5]","synth(5, 5, 5)_s7202",15,M5,2,22,328,424,1072,2983,"{""rz"": 1994, ""cx"": 1072, ""sx"": 989}",X on the seed qubits (excluded),ok
+"[5, 5, 5]","synth(5, 5, 5)_s7202",15,M5,3,22,492,589,1608,4471,"{""rz"": 2991, ""cx"": 1608, ""sx"": 1480}",X on the seed qubits (excluded),ok
+"[5, 5, 5]","synth(5, 5, 5)_s7202",15,M5,4,22,656,754,2144,5959,"{""rz"": 3988, ""cx"": 2144, ""sx"": 1971}",X on the seed qubits (excluded),ok
+"[5, 5, 5]","synth(5, 5, 5)_s7203",15,M1,1,21,22,50,144,318,"{""rz"": 213, ""cx"": 144, ""sx"": 105}",Dicke product state (excluded),ok
+"[5, 5, 5]","synth(5, 5, 5)_s7203",15,M1,2,21,44,95,288,630,"{""rz"": 426, ""cx"": 288, ""sx"": 204}",Dicke product state (excluded),ok
+"[5, 5, 5]","synth(5, 5, 5)_s7203",15,M1,3,21,66,140,432,942,"{""rz"": 639, ""cx"": 432, ""sx"": 303}",Dicke product state (excluded),ok
+"[5, 5, 5]","synth(5, 5, 5)_s7203",15,M1,4,21,88,185,576,1254,"{""rz"": 852, ""cx"": 576, ""sx"": 402}",Dicke product state (excluded),ok
+"[5, 5, 5]","synth(5, 5, 5)_s7203",15,M2,1,21,4,50,144,318,"{""rz"": 213, ""cx"": 144, ""sx"": 105}",Dicke product state (excluded),ok
+"[5, 5, 5]","synth(5, 5, 5)_s7203",15,M2,2,21,8,95,288,630,"{""rz"": 426, ""cx"": 288, ""sx"": 204}",Dicke product state (excluded),ok
+"[5, 5, 5]","synth(5, 5, 5)_s7203",15,M2,3,21,12,140,432,942,"{""rz"": 639, ""cx"": 432, ""sx"": 303}",Dicke product state (excluded),ok
+"[5, 5, 5]","synth(5, 5, 5)_s7203",15,M2,4,21,16,185,576,1254,"{""rz"": 852, ""cx"": 576, ""sx"": 402}",Dicke product state (excluded),ok
+"[5, 5, 5]","synth(5, 5, 5)_s7203",15,M4,1,15,2,27,60,120,"{""rz"": 90, ""cx"": 60, ""sx"": 30}",H on every qubit (excluded),ok
+"[5, 5, 5]","synth(5, 5, 5)_s7203",15,M4,2,15,4,47,120,225,"{""rz"": 165, ""cx"": 120, ""sx"": 60}",H on every qubit (excluded),ok
+"[5, 5, 5]","synth(5, 5, 5)_s7203",15,M4,3,15,6,67,180,330,"{""rz"": 240, ""cx"": 180, ""sx"": 90}",H on every qubit (excluded),ok
+"[5, 5, 5]","synth(5, 5, 5)_s7203",15,M4,4,15,8,87,240,435,"{""rz"": 315, ""cx"": 240, ""sx"": 120}",H on every qubit (excluded),ok
+"[5, 5, 5]","synth(5, 5, 5)_s7203",15,M5,1,21,149,248,476,1314,"{""rz"": 877, ""cx"": 476, ""sx"": 437}",X on the seed qubits (excluded),ok
+"[5, 5, 5]","synth(5, 5, 5)_s7203",15,M5,2,21,298,413,952,2622,"{""rz"": 1754, ""cx"": 952, ""sx"": 868}",X on the seed qubits (excluded),ok
+"[5, 5, 5]","synth(5, 5, 5)_s7203",15,M5,3,21,447,578,1428,3930,"{""rz"": 2631, ""cx"": 1428, ""sx"": 1299}",X on the seed qubits (excluded),ok
+"[5, 5, 5]","synth(5, 5, 5)_s7203",15,M5,4,21,596,743,1904,5238,"{""rz"": 3508, ""cx"": 1904, ""sx"": 1730}",X on the seed qubits (excluded),ok
+"[5, 5, 5]","synth(5, 5, 5)_s7204",15,M1,1,19,20,50,136,292,"{""rz"": 197, ""cx"": 136, ""sx"": 95}",Dicke product state (excluded),ok
+"[5, 5, 5]","synth(5, 5, 5)_s7204",15,M1,2,19,40,95,272,580,"{""rz"": 394, ""cx"": 272, ""sx"": 186}",Dicke product state (excluded),ok
+"[5, 5, 5]","synth(5, 5, 5)_s7204",15,M1,3,19,60,140,408,868,"{""rz"": 591, ""cx"": 408, ""sx"": 277}",Dicke product state (excluded),ok
+"[5, 5, 5]","synth(5, 5, 5)_s7204",15,M1,4,19,80,185,544,1156,"{""rz"": 788, ""cx"": 544, ""sx"": 368}",Dicke product state (excluded),ok
+"[5, 5, 5]","synth(5, 5, 5)_s7204",15,M2,1,19,4,50,136,292,"{""rz"": 197, ""cx"": 136, ""sx"": 95}",Dicke product state (excluded),ok
+"[5, 5, 5]","synth(5, 5, 5)_s7204",15,M2,2,19,8,95,272,580,"{""rz"": 394, ""cx"": 272, ""sx"": 186}",Dicke product state (excluded),ok
+"[5, 5, 5]","synth(5, 5, 5)_s7204",15,M2,3,19,12,140,408,868,"{""rz"": 591, ""cx"": 408, ""sx"": 277}",Dicke product state (excluded),ok
+"[5, 5, 5]","synth(5, 5, 5)_s7204",15,M2,4,19,16,185,544,1156,"{""rz"": 788, ""cx"": 544, ""sx"": 368}",Dicke product state (excluded),ok
+"[5, 5, 5]","synth(5, 5, 5)_s7204",15,M4,1,15,2,27,60,120,"{""rz"": 90, ""cx"": 60, ""sx"": 30}",H on every qubit (excluded),ok
+"[5, 5, 5]","synth(5, 5, 5)_s7204",15,M4,2,15,4,47,120,225,"{""rz"": 165, ""cx"": 120, ""sx"": 60}",H on every qubit (excluded),ok
+"[5, 5, 5]","synth(5, 5, 5)_s7204",15,M4,3,15,6,67,180,330,"{""rz"": 240, ""cx"": 180, ""sx"": 90}",H on every qubit (excluded),ok
+"[5, 5, 5]","synth(5, 5, 5)_s7204",15,M4,4,15,8,87,240,435,"{""rz"": 315, ""cx"": 240, ""sx"": 120}",H on every qubit (excluded),ok
+"[5, 5, 5]","synth(5, 5, 5)_s7204",15,M5,1,19,119,226,356,952,"{""rz"": 637, ""cx"": 356, ""sx"": 315}",X on the seed qubits (excluded),ok
+"[5, 5, 5]","synth(5, 5, 5)_s7204",15,M5,2,19,238,391,712,1900,"{""rz"": 1274, ""cx"": 712, ""sx"": 626}",X on the seed qubits (excluded),ok
+"[5, 5, 5]","synth(5, 5, 5)_s7204",15,M5,3,19,357,556,1068,2848,"{""rz"": 1911, ""cx"": 1068, ""sx"": 937}",X on the seed qubits (excluded),ok
+"[5, 5, 5]","synth(5, 5, 5)_s7204",15,M5,4,19,476,721,1424,3796,"{""rz"": 2548, ""cx"": 1424, ""sx"": 1248}",X on the seed qubits (excluded),ok

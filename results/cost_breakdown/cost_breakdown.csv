@@ -1,0 +1,18 @@
+route,material,component,formula,inr_per_t,usd_per_t,share_of_total,label,source,refs
+H1,coal,purchase price,US$ 242.0,20244.8972,242.0,0.8824173317490481,Q,"REQ Dec 2025, Table 4.2, p. 30, HCC FOB Australia East Coast, 2024",[2]
+H1,coal,sea freight,US$ 22.0,1840.4451999999999,22.0,0.08021975743173165,A,"inside EY/ISA US$15-25/t band (freight+insurance+FX), Sept 2025, p. 21",[3]
+H1,coal,port wharfage,Rs 40 / 83.6566,40.0,0.4781451792207668,0.001743485922465535,Q,"Karaikal Port BPTS/KPPL/04 w.e.f. 1 Oct 2024, p. 31, coal wharfage; stevedoring 'As per CHA' = NF, excluded",[4]
+H1,coal,rail freight,"Rs 3,447,600 / 1.05 / 4,017.9 t (327 km, class 145A)",817.2001720870534,9.76850806854514,0.03561942489675475,Q,"RailSAHAY freight calculator, KIKP -> MCRD, accessed 3 Oct 2026; FOIS class 145A slab 276-350 = 797.2",[5][15][16]
+H1,coal,TOTAL,sum of components,22942.54257208705,274.2466532477659,1.0,D,,
+R1,ore,purchase price,Rs 5389 / 83.6566,5389.0,64.4181092705178,0.7956510286085415,Q+A,"IBM ASP Feb 2024, Karnataka fines 62-65% Fe; A: delivery basis not stated in the source; used as the ex-mine price",[6]
+R1,ore,rail freight,"Rs 5,839,107 / 1.05 / 4,017.9 t (609 km, class 165)",1384.0698588103949,16.544658267373944,0.20434897139145847,Q,"RailSAHAY freight calculator, BAY -> MCRD, accessed 3 Oct 2026; FOIS class 165 slab 601-650 = 1113.1",[5][15][16]
+R1,ore,TOTAL,sum of components,6773.069858810395,80.96276753789175,1.0,D,,
+R2,scrap,purchase price,Rs 31800 / 83.6566,31800.0,380.1254174805096,0.9632300556856017,Q+A,"BigMint, 2 Aug 2024, Chennai HMS 80:20; A: delivery basis not stated in the source; used as the ex-yard price",[8]
+R2,scrap,road freight,3.6 Rs/tkm x 337.2 km,1213.92,14.510749898991833,0.03676994431439829,"Q (rate), D (km)","rate: NITI Aayog & RMI 2021, Exh. 3-1, p. 31 (2015 national average, Aritua et al. 2018); not escalated (A); km: OSRM, Chennai centre -> plant 11.8115N 77.9200E, 3 Oct 2026",[9][10][11]
+R2,scrap,TOTAL,sum of components,33013.92,394.63616737950144,1.0,D,,
+R3,scrap,purchase price,Rs 31800 / 83.6566,31800.0,380.1254174805096,0.977740717919958,A,Chennai price used; Vellore price NF,[8]
+R3,scrap,road freight,3.6 Rs/tkm x 201.1 km,723.96,8.65394959871666,0.022259282080041916,"Q (rate), D (km)","rate: NITI Aayog & RMI 2021, Exh. 3-1, p. 31 (2015 national average, Aritua et al. 2018); not escalated (A); km: OSRM, Vellore centre -> plant, 3 Oct 2026",[9][10][11]
+R3,scrap,TOTAL,sum of components,32523.960000000003,388.7793670792263,1.0,D,,
+R4,scrap,purchase price,Rs 31800 / 83.6566,31800.0,380.1254174805096,0.981248889152201,A,Chennai price used; Bengaluru price NF,[8]
+R4,scrap,road freight,3.6 Rs/tkm x 168.8 km,607.6800000000001,7.263981562721891,0.018751110847799044,"Q (rate), D (km)","rate: NITI Aayog & RMI 2021, Exh. 3-1, p. 31 (2015 national average, Aritua et al. 2018); not escalated (A); km: OSRM, Bengaluru centre -> plant, 3 Oct 2026",[9][10][11]
+R4,scrap,TOTAL,sum of components,32407.68,387.3893990432315,1.0,D,,

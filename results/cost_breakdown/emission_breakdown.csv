@@ -1,0 +1,17 @@
+route,component,formula,kgco2e_per_t,label,source,refs
+H1,sea leg,6.1 g/tkm x 9295.0 km / 1000,56.6995,"Q(factor)+A(Panamax, VLSFO)","GLEC v3.2, Table 14, p. 107, WTW incl. 15% DAF; use with shortest feasible distance only",[13][12]
+H1,rail leg,10.6 g/tkm x 327 km / 1000,3.4661999999999997,Q,"SFC India V1.0 (May 2025), WTW",[14][5]
+H1,hub,2.7 kg/t,2.7,Q(factor)+A(category),"GLEC v3.2, Table 3, p. 96, storage+transshipment, ambient median",[13]
+H1,TOTAL,sum of components,62.865700000000004,D,,
+R1,rail leg,10.6 g/tkm x 609 km / 1000,6.4554,Q,"SFC India V1.0 (May 2025), WTW",[14][5]
+R1,hub,1.2 kg/t,1.2,Q(factor)+A(category),"GLEC v3.2, Table 3, p. 96, transshipment, ambient median",[13]
+R1,TOTAL,sum of components,7.6554,D,,
+R2,truck leg,66.3 g/tkm x 337.2 km / 1000,22.35636,Q(factor)+A(HCV-3 class),"SFC India V1.0 (May 2025), WTW",[14][11]
+R2,hub,0.0 kg/t,0.0,A,direct truck to plant gate,
+R2,TOTAL,sum of components,22.35636,D,,
+R3,truck leg,66.3 g/tkm x 201.1 km / 1000,13.33293,Q(factor)+A(HCV-3 class),"SFC India V1.0 (May 2025), WTW",[14][11]
+R3,hub,0.0 kg/t,0.0,A,direct truck to plant gate,
+R3,TOTAL,sum of components,13.33293,D,,
+R4,truck leg,66.3 g/tkm x 168.8 km / 1000,11.19144,Q(factor)+A(HCV-3 class),"SFC India V1.0 (May 2025), WTW",[14][11]
+R4,hub,0.0 kg/t,0.0,A,direct truck to plant gate,
+R4,TOTAL,sum of components,11.19144,D,,

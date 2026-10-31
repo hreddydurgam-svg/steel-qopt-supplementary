@@ -1,0 +1,35 @@
+section,cvar_alpha,case,plan_matches_exact,p_opt_median,certified,violation_rate
+3.4,0.05,S0_baseline,True,0.2121840225704624,,
+3.4,0.05,S1_sea_freight_x3,True,0.1879855188218816,,
+3.4,0.05,S3_emission_weighted,True,0.1512530374312696,,
+3.4,0.05,S4_R2_price_plus20pct,True,0.1098214998979073,,
+3.4,0.05,S5_R4_capacity_reduced,True,0.8799697823247512,,
+3.5,0.05,gaussian_sigma0.08_eps0.05,True,,True,0.0428
+3.5,0.05,student_t4_sigma0.08_eps0.05,True,,True,0.046
+3.5,0.05,gaussian_sigma0.04_eps0.01,True,,True,0.0069
+3.6,0.05,"w_cost=0, w_emit=0.8",True,0.1829265875217842,,
+3.6,0.05,"w_cost=0.1, w_emit=0.7",True,0.1512530374312696,,
+3.6,0.05,"w_cost=0.2, w_emit=0.6",True,0.1557328099861823,,
+3.6,0.05,"w_cost=0.3, w_emit=0.5",True,0.1873111922120998,,
+3.6,0.05,"w_cost=0.4, w_emit=0.4",True,0.1678295192058409,,
+3.6,0.05,"w_cost=0.5, w_emit=0.3",True,0.2121840225704624,,
+3.6,0.05,"w_cost=0.6, w_emit=0.2",True,0.1812470684581393,,
+3.6,0.05,"w_cost=0.7, w_emit=0.1",True,0.1708832380224616,,
+3.6,0.05,"w_cost=0.8, w_emit=0",True,0.1732223918062515,,
+3.4,1.0,S0_baseline,True,0.7109597484523824,,
+3.4,1.0,S1_sea_freight_x3,True,0.6039697563663513,,
+3.4,1.0,S3_emission_weighted,True,0.8171545194779721,,
+3.4,1.0,S4_R2_price_plus20pct,True,0.8118718833113826,,
+3.4,1.0,S5_R4_capacity_reduced,True,0.9999974361724652,,
+3.5,1.0,gaussian_sigma0.08_eps0.05,True,,True,0.0428
+3.5,1.0,student_t4_sigma0.08_eps0.05,True,,True,0.046
+3.5,1.0,gaussian_sigma0.04_eps0.01,True,,True,0.0069
+3.6,1.0,"w_cost=0, w_emit=0.8",True,0.8441137140516675,,
+3.6,1.0,"w_cost=0.1, w_emit=0.7",True,0.8171545194779721,,
+3.6,1.0,"w_cost=0.2, w_emit=0.6",True,0.7512056501552116,,
+3.6,1.0,"w_cost=0.3, w_emit=0.5",True,0.7392276584235409,,
+3.6,1.0,"w_cost=0.4, w_emit=0.4",True,0.7852824072997215,,
+3.6,1.0,"w_cost=0.5, w_emit=0.3",True,0.7109597484523824,,
+3.6,1.0,"w_cost=0.6, w_emit=0.2",True,0.5487234450543066,,
+3.6,1.0,"w_cost=0.7, w_emit=0.1",True,0.5895309454762483,,
+3.6,1.0,"w_cost=0.8, w_emit=0",True,0.5765979137075801,,

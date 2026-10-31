@@ -1,0 +1,2 @@
+eps_cal,k,opt_counts,opt_f,viol_cal,viol_val,cp95_upper,certified,saa_exact_counts,saa_exact_f,saa_exact_viol_val,saa_exact_cp95_upper
+0.05,"[4, 4, 8]","[4, 4, 2, 3, 3]",0.8472827529668105,0.040000000000000036,0.04279999999999995,0.04627939367492027,True,"[4, 4, 2, 3, 2]",0.8105191806572605,0.0494,0.05311287785252106

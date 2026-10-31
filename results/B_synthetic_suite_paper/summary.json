@@ -1,0 +1,52 @@
+{
+  "environment": {
+    "python": "3.13.14",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "machine": "AMD64",
+    "processor": "AMD64 Family 25 Model 117 Stepping 2, AuthenticAMD",
+    "cpu_count": 16,
+    "time_utc": "2026-10-06T16:07:00Z",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "pandas": "3.0.6",
+    "matplotlib": "3.11.2",
+    "pulp": "2.9.0",
+    "qiskit": "2.5.2",
+    "qiskit_aer": "0.17.2",
+    "qbraid": "not installed"
+  },
+  "params_sha256": "5f80e9b0c819670e62678f2cfabfdcbeccf80ed8b31b44400f3aca635208eb2e",
+  "profile": "paper",
+  "cvar_alpha": 0.05,
+  "sizes": [
+    [
+      3,
+      3,
+      3
+    ],
+    [
+      4,
+      4,
+      4
+    ],
+    [
+      5,
+      5,
+      5
+    ]
+  ],
+  "instances_per_size": 20,
+  "seeds": 10,
+  "tuned_penalties": {
+    "[3, 3, 3]": "see penalty_tuning_3x3x3.csv",
+    "[4, 4, 4]": "see penalty_tuning_4x4x4.csv",
+    "[5, 5, 5]": {
+      "M4": {
+        "lambda1": 0.1,
+        "lambda2": 0.1
+      }
+    }
+  },
+  "wall_seconds_this_run": 5495.249270915985,
+  "note": "cvar_saturated = training CVaR <= f* + tolerance; above that point P(optimum) is not pushed by the objective (for M3/M4 the penalised training energy of infeasible states can lie below f*, so there the flag also signals that infeasible states are rewarded). Synthetic instances (declared). Noiseless statevector simulation. No claim against classical solvers."
+}

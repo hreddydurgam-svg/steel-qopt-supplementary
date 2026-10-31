@@ -1,0 +1,4 @@
+case,comparison,identical_plan,n,statistic,p_value,wins_a,wins_b,ties,median_diff,median_diff_ci95,mean_diff,p_lower,p_upper,equivalent
+gaussian_sigma0.08_eps0.05,"M1_committed - exact_safe_count (realised objective, all scenarios)",True,10000,,1.0,0,0,10000,0.0,"(0.0, 0.0)",0.0,0.0,0.0,True
+student_t4_sigma0.08_eps0.05,"M1_committed - exact_safe_count (realised objective, all scenarios)",True,10000,,1.0,0,0,10000,0.0,"(0.0, 0.0)",0.0,0.0,0.0,True
+gaussian_sigma0.04_eps0.01,"M1_committed - exact_safe_count (realised objective, all scenarios)",True,10000,,1.0,0,0,10000,0.0,"(0.0, 0.0)",0.0,0.0,0.0,True

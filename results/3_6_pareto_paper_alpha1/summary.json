@@ -1,0 +1,30 @@
+{
+  "environment": {
+    "python": "3.13.14",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "machine": "AMD64",
+    "processor": "AMD64 Family 25 Model 117 Stepping 2, AuthenticAMD",
+    "cpu_count": 16,
+    "time_utc": "2026-10-07T11:49:38Z",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "pandas": "3.0.6",
+    "matplotlib": "3.11.2",
+    "pulp": "2.9.0",
+    "qiskit": "2.5.2",
+    "qiskit_aer": "0.17.2",
+    "qbraid": "not installed"
+  },
+  "params_sha256": "5f80e9b0c819670e62678f2cfabfdcbeccf80ed8b31b44400f3aca635208eb2e",
+  "profile": "paper",
+  "cvar_alpha": 1.0,
+  "n_feasible_configs": 8,
+  "n_non_dominated": 1,
+  "n_supported": 1,
+  "n_non_dominated_3d": 2,
+  "weighted_sum_optima_all_3d_non_dominated": true,
+  "unique_exact_weighted": 2,
+  "method": "M1",
+  "unique_quantum": 2,
+  "wall_seconds": 61.57686400413513
+}

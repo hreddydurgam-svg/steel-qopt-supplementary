@@ -1,0 +1,44 @@
+{
+  "environment": {
+    "python": "3.13.14",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "machine": "AMD64",
+    "processor": "AMD64 Family 25 Model 117 Stepping 2, AuthenticAMD",
+    "cpu_count": 16,
+    "time_utc": "2026-10-06T14:35:22Z",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "pandas": "3.0.6",
+    "matplotlib": "3.11.2",
+    "pulp": "2.9.0",
+    "qiskit": "2.5.2",
+    "qiskit_aer": "0.17.2",
+    "qbraid": "not installed"
+  },
+  "params_sha256": "5f80e9b0c819670e62678f2cfabfdcbeccf80ed8b31b44400f3aca635208eb2e",
+  "profile": "paper",
+  "cvar_alpha": 1.0,
+  "methods": [
+    "M1",
+    "M2",
+    "M4",
+    "M5"
+  ],
+  "tuned_penalties": {
+    "M4": {
+      "lambda1": 0.5,
+      "lambda2": 2
+    }
+  },
+  "skipped_methods": [],
+  "milp": {
+    "status": "OK",
+    "f": 0.8472827529668105,
+    "matches_enumeration": true,
+    "seconds": 0.05663657188415527,
+    "pulp_version": "2.9.0"
+  },
+  "exact_f_opt": 0.8472827529668094,
+  "wall_seconds": 865.2683691978455,
+  "note": "Case study. The structural methods (M1, M2) can reach only the feasible set; with identical blocks the steel instance has few feasible bitstrings and many tied optima, so P(optimum) is compared with uniform_p_opt. Algorithm comparisons are made on the synthetic suite (run_B_synthetic_suite.py)."
+}

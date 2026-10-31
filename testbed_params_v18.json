@@ -1,0 +1,955 @@
+{
+  "_spec": {
+    "version": "18",
+    "date": "2026-10-03",
+    "rule": "Data, risk, solver and experiment settings are read from this file via load_params_v18.py; library functions in qopt/ carry defaults that the scripts always override with these values. Fixed memory caps in the code: exact enumeration up to 24 items, joint full-space distributions up to 5,000,000 states.",
+    "labels": {
+      "Q": "quoted from named source",
+      "D": "derived by arithmetic in load_params_v18.py",
+      "A": "assumption, reason given",
+      "NF": "not found, excluded and declared"
+    },
+    "time_unit": "month",
+    "currency": "USD",
+    "sensitivity_policy": "Fields named 'sensitivity*' declare plausible ranges for the reader. The scripts run these sensitivities: Student-t copula and sigma 0.04 with epsilon 0.01 (Section 3.5, validation_cases), stress scenarios S1-S5 (3.4), weight sweep (3.6), CVaR alpha 1 (Benchmark B, --alpha 1). All other sensitivity values are declared only."
+  },
+  "fx_inr_per_usd": {
+    "value": 83.6566,
+    "label": "Q",
+    "source": "FRED AEXINUS, 2024 annual average"
+  },
+  "demand_t_per_month": {
+    "coal": {
+      "annual_t": 673291,
+      "label": "Q+D",
+      "source": "JSW Salem Works Environmental Statement FY2024-25, Part B, coke-oven coal; /12"
+    },
+    "ore": {
+      "annual_t_components": [
+        682162,
+        909775
+      ],
+      "label": "Q+D",
+      "source": "Same, BF iron ore + sinter fines; sum/12"
+    },
+    "scrap": {
+      "base_case": "eaf_only",
+      "eaf_only": {
+        "billet_annual_t": 1073347,
+        "eaf_to_bof_ratio": [
+          20.8,
+          41.1
+        ],
+        "scrap_t_per_t": 1.1236,
+        "label": "Q+D+A",
+        "source": "Billets: Environmental Statement FY2024-25; EAF 20.8% and BOF 41.1% of India crude steel FY2024-25: Ministry of Steel Annual Report 2025-26, p. 17; 1,123.6 kg/t: Cappel, AIST MENA 2021 (worked example, not an average)",
+        "reason": "Hypothetical EAF sized at the national EAF:BOF ratio (A). Only purchased scrap is supplied by routes R2-R4."
+      },
+      "sensitivity_upper": {
+        "add_melting_shop_annual_t": 212600,
+        "label": "Q+A",
+        "source": "Environmental Statement FY2024-25, 'Iron Skull & Steel Scrap'",
+        "reason": "Upper bound: treats all of the existing melting-shop skull and scrap as purchased. Purchased share is NF; skull is generated in-plant, so it is excluded from the base case."
+      }
+    }
+  },
+  "routes": {
+    "H1": {
+      "material": "coal",
+      "name": "Hay Point (AU) -> Karaikal -> Mecheri Road",
+      "price_usd": {
+        "value": 242.0,
+        "label": "Q",
+        "source": "REQ Dec 2025, Table 4.2, p. 30, HCC FOB Australia East Coast, 2024"
+      },
+      "sea_freight_usd": {
+        "value": 22.0,
+        "label": "A",
+        "source": "inside EY/ISA US$15-25/t band (freight+insurance+FX), Sept 2025, p. 21",
+        "sensitivity": [
+          15.0,
+          25.0
+        ]
+      },
+      "port_handling_inr": {
+        "value": 40,
+        "label": "Q",
+        "source": "Karaikal Port BPTS/KPPL/04 w.e.f. 1 Oct 2024, p. 31, coal wharfage; stevedoring 'As per CHA' = NF, excluded",
+        "sensitivity_usd_total": 1.5
+      },
+      "rail": {
+        "rake_total_inr_incl_gst": 3447600,
+        "distance_km": 327,
+        "rate_class": "145A",
+        "base_rate_inr_t": 797.2,
+        "label": "Q",
+        "source": "RailSAHAY freight calculator, KIKP -> MCRD, accessed 3 Oct 2026; FOIS class 145A slab 276-350 = 797.2"
+      },
+      "sea_distance_km": {
+        "value": 9295.0,
+        "label": "D",
+        "source": "searoute v1.6.0, 3 Oct 2026",
+        "sensitivity": [
+          9435.2
+        ]
+      },
+      "legs_ef": [
+        [
+          "sea",
+          "sea_distance_km"
+        ],
+        [
+          "rail",
+          "rail.distance_km"
+        ]
+      ],
+      "hub_ef_kg_t": {
+        "value": 2.7,
+        "label": "Q(factor)+A(category)",
+        "source": "GLEC v3.2, Table 3, p. 96, storage+transshipment, ambient median"
+      }
+    },
+    "R1": {
+      "material": "ore",
+      "name": "Ballari Jn -> Mecheri Road (rail)",
+      "price_inr": {
+        "value": 5389,
+        "label": "Q+A",
+        "source": "IBM ASP Feb 2024, Karnataka fines 62-65% Fe",
+        "basis": "A: delivery basis not stated in the source; used as the ex-mine price"
+      },
+      "rail": {
+        "rake_total_inr_incl_gst": 5839107,
+        "distance_km": 609,
+        "rate_class": "165",
+        "base_rate_inr_t": 1113.1,
+        "label": "Q",
+        "source": "RailSAHAY freight calculator, BAY -> MCRD, accessed 3 Oct 2026; FOIS class 165 slab 601-650 = 1113.1"
+      },
+      "legs_ef": [
+        [
+          "rail",
+          "rail.distance_km"
+        ]
+      ],
+      "hub_ef_kg_t": {
+        "value": 1.2,
+        "label": "Q(factor)+A(category)",
+        "source": "GLEC v3.2, Table 3, p. 96, transshipment, ambient median",
+        "sensitivity": [
+          2.7
+        ]
+      }
+    },
+    "R2": {
+      "material": "scrap",
+      "name": "Chennai -> plant (road)",
+      "price_inr": {
+        "value": 31800,
+        "label": "Q+A",
+        "source": "BigMint, 2 Aug 2024, Chennai HMS 80:20",
+        "basis": "A: delivery basis not stated in the source; used as the ex-yard price"
+      },
+      "road_km": {
+        "value": 337.2,
+        "label": "D",
+        "source": "OSRM, Chennai centre -> plant 11.8115N 77.9200E, 3 Oct 2026"
+      },
+      "legs_ef": [
+        [
+          "truck",
+          "road_km"
+        ]
+      ],
+      "hub_ef_kg_t": {
+        "value": 0.0,
+        "label": "A",
+        "source": "direct truck to plant gate"
+      }
+    },
+    "R3": {
+      "material": "scrap",
+      "name": "Vellore -> plant (road)",
+      "price_inr": {
+        "value": 31800,
+        "label": "A",
+        "source": "Chennai price used; Vellore price NF"
+      },
+      "road_km": {
+        "value": 201.1,
+        "label": "D",
+        "source": "OSRM, Vellore centre -> plant, 3 Oct 2026"
+      },
+      "legs_ef": [
+        [
+          "truck",
+          "road_km"
+        ]
+      ],
+      "hub_ef_kg_t": {
+        "value": 0.0,
+        "label": "A",
+        "source": "direct truck to plant gate"
+      }
+    },
+    "R4": {
+      "material": "scrap",
+      "name": "Bengaluru -> plant (road)",
+      "price_inr": {
+        "value": 31800,
+        "label": "A",
+        "source": "Chennai price used; Bengaluru price NF"
+      },
+      "road_km": {
+        "value": 168.8,
+        "label": "D",
+        "source": "OSRM, Bengaluru centre -> plant, 3 Oct 2026"
+      },
+      "legs_ef": [
+        [
+          "truck",
+          "road_km"
+        ]
+      ],
+      "hub_ef_kg_t": {
+        "value": 0.0,
+        "label": "A",
+        "source": "direct truck to plant gate"
+      }
+    }
+  },
+  "rail_common": {
+    "wagons_per_rake": 59,
+    "pcc_t_per_wagon": 68.1,
+    "label": "Q",
+    "source": "RailSAHAY (BOXN, CC+8)",
+    "gst_rate": 0.05,
+    "gst_label": "D",
+    "gst_source": "Reconstruction of RailSAHAY rake totals (to within Rs 7 per rake)",
+    "gst_treatment": "exclude",
+    "gst_reason": "A: GST treated as recoverable input tax; other prices are tax-exclusive. Sensitivity: include."
+  },
+  "road_common": {
+    "truck_rate_inr_tkm": 3.6,
+    "label": "Q",
+    "source": "NITI Aayog & RMI 2021, Exh. 3-1, p. 31 (2015 national average, Aritua et al. 2018); not escalated (A)"
+  },
+  "emission_factors_g_tkm": {
+    "sea": {
+      "value": 6.1,
+      "label": "Q(factor)+A(Panamax, VLSFO)",
+      "source": "GLEC v3.2, Table 14, p. 107, WTW incl. 15% DAF; use with shortest feasible distance only",
+      "sensitivity": [
+        4.1
+      ]
+    },
+    "rail": {
+      "value": 10.6,
+      "label": "Q",
+      "source": "SFC India V1.0 (May 2025), WTW"
+    },
+    "truck": {
+      "value": 66.3,
+      "label": "Q(factor)+A(HCV-3 class)",
+      "source": "SFC India V1.0 (May 2025), WTW",
+      "sensitivity": [
+        55.1
+      ]
+    }
+  },
+  "blocks": {
+    "_note": "Each qubit = one contracted block of one route. Block size b_m = ceil(D_m / k_req_m / unit_m) * unit_m. In the optimisation objective, cost and emissions are charged on contracted tonnes. Out-of-sample evaluation (Section 3.5) charges emissions on delivered tonnes and cost with the cost-shock multiplier.",
+    "label": "A",
+    "reason": "Block sizes follow one rule tied to sourced demand and transport units, so a buffer above demand is a real decision. Pool sizes are the smallest that make the 95% joint chance constraint feasible with spare choices left (16 feasible count vectors under the base risk settings; printed by load_params_v18.py).",
+    "coal": {
+      "k_req": 2,
+      "unit_t": "rake",
+      "pool": {
+        "H1": 5
+      }
+    },
+    "ore": {
+      "k_req": 2,
+      "unit_t": "rake",
+      "pool": {
+        "R1": 4
+      }
+    },
+    "scrap": {
+      "k_req": 4,
+      "unit_t": 1000,
+      "pool": {
+        "R2": 3,
+        "R3": 3,
+        "R4": 3
+      },
+      "unit_reason": "A: no sourced truck-lot size; rounded to 1,000 t"
+    }
+  },
+  "route_capacity_caps_t_per_month": {
+    "H1": {
+      "value": 500000,
+      "label": "A",
+      "source": "manuscript-stated capacity; no independent source found (A)"
+    },
+    "R1": {
+      "value": 300000,
+      "label": "A",
+      "source": "manuscript-stated capacity; no independent source found (A)"
+    },
+    "R2": {
+      "value": null,
+      "label": "NF",
+      "source": "no per-route scrap supply figure; cap = pool x block"
+    },
+    "R3": {
+      "value": null,
+      "label": "NF",
+      "source": "as R2"
+    },
+    "R4": {
+      "value": null,
+      "label": "NF",
+      "source": "as R2"
+    },
+    "_check": "pool x block must not exceed a non-null cap"
+  },
+  "synergy": {
+    "enabled": false,
+    "illustrative_values": {
+      "cost_penalty": 0.05,
+      "emission_discount": -0.1
+    },
+    "label": "A",
+    "reason": "No source found for a 5% congestion / 10% emissions synergy; switched off. Illustrative values are declared only and not run."
+  },
+  "objective": {
+    "weights": {
+      "w_cost": 0.5,
+      "w_emit": 0.3,
+      "w_risk": 0.2,
+      "label": "A",
+      "source": "assumption: stated weights; robustness shown by the weight sweep"
+    },
+    "weight_sweep": {
+      "w_risk_fixed": 0.2,
+      "w_cost_start": 0.0,
+      "w_cost_stop": 0.8,
+      "step": 0.1,
+      "rule": "w_emit = 1 - w_risk - w_cost"
+    },
+    "normalisation": "C_ref, E_ref, R_ref = values with all blocks selected (D). f = w_cost*Cost/C_ref + w_emit*Emis/E_ref + w_risk*Risk/R_ref.",
+    "risk_term": {
+      "definition": "Risk(x) = sum over materials m of Var_scenarios(sum_{i in m} b_i x_i F_route(i)) / D_m^2 = x^T Q x, Q_ij = Cov(b_i F_i, b_j F_j)/D_m^2 for i,j in the same material, 0 across materials",
+      "scenarios": "calibration scenarios of the run (same copula family and severity)",
+      "label": "A",
+      "reason": "supply-volatility term from the copula-GPD scenarios; makes the optimisation non-trivial and puts the risk model inside the objective"
+    }
+  },
+  "risk": {
+    "capacity_shock": {
+      "level": "route",
+      "reason_level": "A: one disruption (port, rail line, road corridor) hits every block of the route alike",
+      "loss_distribution": "GPD",
+      "xi": 0.2,
+      "mu": 0.0,
+      "sigma": 0.08,
+      "label": "A",
+      "source": "assumption: unsourced severity; sensitivity sigma 0.04",
+      "delivered": "b * max(0, 1 - G_route)",
+      "sensitivity_sigma": [
+        0.04
+      ]
+    },
+    "cost_shock": {
+      "loss_distribution": "GPD",
+      "xi": 0.3,
+      "mu": 0.9,
+      "sigma": 0.15,
+      "applies_to": "TLC only (not emissions)",
+      "label": "A",
+      "source": "assumption: unsourced; applied to cost only",
+      "use": "evaluation of expected cost and regret only",
+      "dependence": "same copula draw as capacity_shock (comonotone within a route)"
+    },
+    "copula": {
+      "base": "gaussian",
+      "sensitivity": [
+        {
+          "family": "student_t",
+          "nu": 4
+        }
+      ],
+      "rho_same_material_other_route": 0.7,
+      "rho_cross_material": 0.0,
+      "label": "A",
+      "source": "assumption: 0.7 between routes of the same material; 0 across materials (sensitivity 0.3)",
+      "sensitivity_rho_cross_material": [
+        0.3
+      ]
+    },
+    "chance_constraint": {
+      "form": "joint over coal, ore, scrap: P(sum of delivered >= D_m for all m) >= 1 - epsilon",
+      "epsilon": 0.05,
+      "label": "A",
+      "reason": "Under the base shock severity, epsilon = 0.01 is infeasible even with all 18 blocks (all-on calibration violation 0.032, printed by load_params_v18.py); 0.05 is the tightest round value that is feasible with choices left.",
+      "sensitivity_epsilon": [
+        0.1,
+        {
+          "epsilon": 0.01,
+          "requires_sigma": 0.04
+        }
+      ],
+      "calibration": {
+        "method": "SAA",
+        "n_cal": 1000,
+        "seed": 20261003,
+        "epsilon_cal_grid": [
+          0.05,
+          0.04,
+          0.03,
+          0.02,
+          0.01,
+          0.008,
+          0.006,
+          0.004
+        ],
+        "rule": "over grid values <= epsilon, use the largest epsilon_cal whose safe-count optimum is certified on validation; if none, report the case as not certifiable. The exact SAA optimum (no count buffer) is reported alongside for comparison."
+      },
+      "validation": {
+        "n_val": 10000,
+        "seed": 20261004,
+        "certify": "one-sided Clopper-Pearson upper bound (confidence statistics.confidence) on the violation rate <= epsilon"
+      },
+      "safe_count_rule": {
+        "rule": "Blocks within a route are identical, so the buffered demand constraint is a count constraint per material: count_m(x) >= k_m. For a given epsilon_cal, k is 'safe' if every route-count vector whose material counts are >= k has calibration violation <= epsilon_cal. Among safe k, choose the one whose best (exact) objective is lowest; ties -> smallest total k.",
+        "label": "A"
+      },
+      "tost_margin_objective": {
+        "value": 0.01,
+        "label": "A",
+        "reason": "pre-specified equivalence margin in normalised-objective units"
+      },
+      "validation_cases": [
+        {
+          "id": "gaussian_sigma0.08_eps0.05",
+          "family": "gaussian",
+          "nu": null,
+          "sigma": null,
+          "epsilon": 0.05,
+          "role": "base case"
+        },
+        {
+          "id": "student_t4_sigma0.08_eps0.05",
+          "family": "student_t",
+          "nu": 4,
+          "sigma": null,
+          "epsilon": 0.05,
+          "role": "tail-dependence sensitivity (copula.sensitivity)"
+        },
+        {
+          "id": "gaussian_sigma0.04_eps0.01",
+          "family": "gaussian",
+          "nu": null,
+          "sigma": 0.04,
+          "epsilon": 0.01,
+          "role": "tighter epsilon; feasible only with the milder severity (sensitivity_epsilon)"
+        }
+      ],
+      "validation_cases_note": "sigma null = capacity_shock.sigma; nu used only for student_t"
+    },
+    "stress_scenarios": {
+      "label": "A (illustrative)",
+      "check": "report for every scenario whether the exact optimum moves and whether a certified plan exists",
+      "list": [
+        {
+          "id": "S1_sea_freight_x3",
+          "H1.sea_freight_usd_multiplier": 3.0
+        },
+        {
+          "id": "S2_R4_closed",
+          "R4.pool": 0
+        },
+        {
+          "id": "S3_emission_weighted",
+          "w_cost": 0.1,
+          "w_emit": 0.7,
+          "w_risk": 0.2
+        },
+        {
+          "id": "S4_R2_price_plus20pct",
+          "R2.price_multiplier": 1.2
+        },
+        {
+          "id": "S5_R4_capacity_reduced",
+          "R4.pool": 2,
+          "description": "R4 available blocks 3 -> 2 (capacity 39,000 -> 26,000 t/month, -33%). A 50% cut (19,500 t) is not representable with 13,000 t blocks; 2 blocks is the nearest level that leaves a certified plan (1 block leaves a single feasible plan)."
+        }
+      ]
+    }
+  },
+  "methods": {
+    "label": "A",
+    "common": {
+      "cvar_alpha": 0.05,
+      "cvar_alpha_sensitivity": [
+        1.0
+      ],
+      "optimizer": "COBYLA",
+      "maxiter_rule": "max(maxiter, 2*n_params_per_run + 2); actual evaluations reported",
+      "init_p1": "uniform: gamma in pi*init_gamma_range_over_pi, beta in pi*init_beta_range_over_pi (M1-M4); M5 uses methods.M5.init_halfwidth",
+      "depth_schedule": "INTERP (Zhou et al. 2020) from p to p+1 within one seed chain",
+      "phase_scaling": "phase operator uses E_train / (f_max_feasible - f_min_feasible)",
+      "shots": 10000,
+      "init_gamma_range_over_pi": [
+        0.0,
+        1.0
+      ],
+      "init_beta_range_over_pi": [
+        0.0,
+        0.5
+      ],
+      "shot_seed_rule": "sampling seed for the final shots = shot_seed_stride * run seed + p",
+      "shot_seed_stride": 1000,
+      "optimizer_options": "scipy.optimize.minimize(method='COBYLA') with scipy defaults except maxiter; COBYLA's path can differ slightly between scipy versions, which are recorded in every summary.json"
+    },
+    "headline": "M1",
+    "headline_note": "M1 is the proposed method; M2 is its single-angle (minimal-parameter) variant. Case-study scripts (3.4-3.6) use the headline method.",
+    "M1": {
+      "name": "MPSX-QAOA (proposed): multi-angle, one beta per XY edge",
+      "mixer": "XY ring per material register incl. slack qubits, one angle per edge",
+      "params_per_layer": "1 + n_edges",
+      "initial_state": "Dicke state per register",
+      "constraint": "structural"
+    },
+    "M2": {
+      "name": "MPSX-QAOA, single-angle variant (one beta per register)",
+      "mixer": "XY ring per material register incl. slack qubits",
+      "params_per_layer": "1 + n_groups",
+      "initial_state": "Dicke state per register (uniform over weight = n_items_in_group)",
+      "constraint": "structural"
+    },
+    "M3": {
+      "name": "Standard QAOA, X mixer, quadratic penalty with binary slack",
+      "penalty_A_grid": [
+        0.5,
+        1,
+        2,
+        5,
+        10
+      ],
+      "constraint": "penalty: A * M * sum_g (count_g - k_g - s_g)^2"
+    },
+    "M4": {
+      "name": "QAOA with unbalanced penalisation (Montanez-Barrera et al. 2024)",
+      "lambda_grid": {
+        "lambda1": [
+          0.1,
+          0.5,
+          1,
+          2
+        ],
+        "lambda2": [
+          0.1,
+          0.5,
+          1,
+          2
+        ]
+      },
+      "constraint": "penalty: M * sum_g (-lambda1*h_g + lambda2*h_g^2), h_g = count_g - k_g"
+    },
+    "M5": {
+      "name": "Multi-angle particle-conserving ansatz (MA-PC), adapted to three materials",
+      "structure": "free RZ per item qubit, free RZZ per item pair with nonzero risk coupling, XY chain over items (shared angle RXX/RYY), XY between every slack and every item; one global register of weight N_items; S = N_items - sum(k) slack qubits",
+      "init_p1": "uniform [-init_halfwidth, init_halfwidth] (as in the original ansatz design)",
+      "constraint": "global count structural; per-material deficit penalised in the CVaR energy: A * M * sum_g deficit_g^2",
+      "penalty_A": 10.0,
+      "subspace_dim_cap": 60000,
+      "init_halfwidth": 0.01
+    },
+    "tuning": {
+      "rule": "penalty parameters of M3/M4 maximise mean P(optimum) over tune_seeds (seed_offset + 0 .. tune_seeds-1, disjoint from evaluation seeds) at depth tune_p (profile). Synthetic suite: on n_tuning_instances held-out instances (seeds disjoint from evaluation instances). Steel case: on the steel instance itself (single instance). Chosen values are written to the results.",
+      "n_tuning_instances": 3,
+      "seed_offset": 1000
+    },
+    "penalty_scale": "M = max_i (lin_i + W_ii + 2 sum_j |W_ij|): largest single-item contribution to f; all penalties are in units of M"
+  },
+  "classical": {
+    "exact": "enumeration of all 2^N item bitstrings (ground truth)",
+    "milp": "PuLP/CBC on the McCormick linearisation of the QUBO (MILP); optional if pulp is installed; checked against enumeration",
+    "greedy": "per material, add the item with the smallest marginal objective until count = k_g",
+    "simulated_annealing": {
+      "evaluations": 10000,
+      "T0_rel": 0.1,
+      "T_end_rel": 0.0001,
+      "penalty_A": 10.0,
+      "penalty": "A * M * sum_g deficit_g^2"
+    },
+    "tabu": {
+      "evaluations": 10000,
+      "tenure": 3,
+      "penalty_A": 10.0,
+      "penalty": "A * M * sum_g deficit_g^2"
+    },
+    "seeds": {
+      "start": 0,
+      "rule": "heuristic seeds start .. start + profile seeds - 1"
+    }
+  },
+  "profiles": {
+    "quick": {
+      "seeds": 5,
+      "p_max": 3,
+      "maxiter": 100,
+      "synthetic_instances_per_size": 3,
+      "grad_inits": 50,
+      "noise_trajectories": 50,
+      "tune_seeds": 2,
+      "tune_p": 1,
+      "steel_methods": [
+        "M1",
+        "M2",
+        "M5"
+      ],
+      "noise_p": 2,
+      "note": "quick: M3/M4 run on the synthetic suite only (18-20 qubit full-space baselines are slow on steel); paper profile runs all five on steel",
+      "synthetic_sizes": [
+        [
+          3,
+          3,
+          3
+        ],
+        [
+          4,
+          4,
+          4
+        ]
+      ],
+      "grad_k_max": 2,
+      "aer_shots": 2000
+    },
+    "paper": {
+      "seeds": 10,
+      "p_max": 4,
+      "maxiter": 150,
+      "synthetic_instances_per_size": 20,
+      "grad_inits": 200,
+      "noise_trajectories": 200,
+      "tune_seeds": 3,
+      "tune_p": 2,
+      "steel_methods": [
+        "M1",
+        "M2",
+        "M3",
+        "M4",
+        "M5"
+      ],
+      "noise_p": 3,
+      "synthetic_sizes": [
+        [
+          3,
+          3,
+          3
+        ],
+        [
+          4,
+          4,
+          4
+        ],
+        [
+          5,
+          5,
+          5
+        ]
+      ],
+      "note": "paper: 20 instances x 3 sizes, 10 seeds, p<=4 (M3 not run at [5,5,5], see synthetic_suite.method_exclusions); the suite resumes after a disconnect",
+      "grad_k_max": 5,
+      "aer_shots": 10000
+    }
+  },
+  "synthetic_suite": {
+    "label": "synthetic (not steel data)",
+    "k_rule": "k_g uniform integer in [max(1, n_g - k_spread), n_g - 1]",
+    "cost_usd_per_item": [
+      5000000.0,
+      25000000.0
+    ],
+    "emis_kg_per_item": [
+      200000.0,
+      3000000.0
+    ],
+    "risk": "Q_g = B B^T / n_g with B ~ N(0,1) (n_g x n_g), within group only",
+    "weights": {
+      "w_cost": 0.5,
+      "w_emit": 0.3,
+      "w_risk": 0.2
+    },
+    "base_seed": 7000,
+    "methods": [
+      "M1",
+      "M2",
+      "M3",
+      "M4",
+      "M5"
+    ],
+    "full_space_qubit_cap": 21,
+    "method_exclusions": [
+      {
+        "method": "M3",
+        "sizes": [
+          [
+            5,
+            5,
+            5
+          ]
+        ],
+        "reason": "compute budget: full-space simulation of M3 at this size needs up to 21 qubits (about 30 h of the paper-profile run on a 2-vCPU Colab runtime); M3 is reported at [3,3,3] and [4,4,4]"
+      }
+    ],
+    "size_seed_stride": 100,
+    "tuning_seed_offset": 50,
+    "seed_rule": "evaluation instance j of size index s: base_seed + size_seed_stride*s + j (j < tuning_seed_offset); tuning instance j: base_seed + size_seed_stride*s + tuning_seed_offset + j (disjoint from evaluation instances)",
+    "k_spread": 3,
+    "sizes_note": "sizes are set per profile (profiles.*.synthetic_sizes)",
+    "capacity_rule": "A method is not run on an instance whose simulation exceeds its stated cap (M3/M4: full_space_qubit_cap qubits; M5: methods.M5.subspace_dim_cap register states, dimension C(N+S, N)). Such instances are recorded in instances.csv (column skipped) and paired tests use only instances where both methods ran."
+  },
+  "trainability": {
+    "gradient_variance": {
+      "sizes": [
+        [
+          2,
+          2,
+          2
+        ],
+        [
+          3,
+          3,
+          3
+        ],
+        [
+          4,
+          4,
+          4
+        ],
+        [
+          5,
+          5,
+          5
+        ]
+      ],
+      "p_list": [
+        1,
+        2,
+        4
+      ],
+      "inits": {
+        "uniform_0_2pi": [
+          0.0,
+          6.283185307179586
+        ],
+        "near_zero_0.01": [
+          -0.01,
+          0.01
+        ]
+      },
+      "energy": "expectation (alpha = 1)",
+      "derivative": "central finite difference with step fd_step on up to grad_k_max sampled last-layer mixer angles; energy rescaled to [0,1] by the method's own range; mean of per-angle variances reported",
+      "methods": [
+        "M1",
+        "M2",
+        "M3",
+        "M5"
+      ],
+      "instance_seed_base": 8000,
+      "instance_seed_rule": "instance seed = instance_seed_base + size index",
+      "init_seed_rule": "initialisation seed = init_seed_stride * size index + p",
+      "init_seed_stride": 100,
+      "penalty_params": {
+        "M3": {
+          "A": 1.0
+        },
+        "note": "fixed for the diagnostic (not tuned)"
+      },
+      "inits_note": "each initialisation draws every angle uniformly from the stated interval (radians)",
+      "fd_step": 0.0001
+    },
+    "dla": {
+      "cases": [
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          2
+        ]
+      ],
+      "k_rule": "k_g = n_g - k_offset_below_n",
+      "methods": [
+        "M1",
+        "M2",
+        "M5",
+        "M4"
+      ],
+      "max_space_dim": 24,
+      "note": "illustrative small cases only; M3 needs >= 6 qubits (64-dim) even for [2,2] and is skipped",
+      "seed": 9,
+      "M4_penalty": {
+        "lambda1": 1.0,
+        "lambda2": 1.0
+      },
+      "instance_rule": "Q_g = B B^T / n_g with B ~ N(0,1); cost and emissions uniform in cost_emis_range; k_g = n_g - k_offset_below_n",
+      "cost_emis_range": [
+        1.0,
+        2.0
+      ],
+      "k_offset_below_n": 1
+    },
+    "depth_sweep": {
+      "p_list": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "instance": {
+        "sizes": [
+          4,
+          4,
+          4
+        ],
+        "seed": 7100
+      },
+      "methods": [
+        "M1",
+        "M2",
+        "M5"
+      ],
+      "rule": "p values above the profile p_max are not run"
+    }
+  },
+  "noise": {
+    "label": "A (simulated sensitivity scenario, not a hardware calibration)",
+    "p1_depolarising": 0.001,
+    "p2_depolarising_sweep": [
+      0.0,
+      0.001,
+      0.003,
+      0.01
+    ],
+    "readout_flip": 0.02,
+    "method": "Monte Carlo Pauli trajectories on the full statevector; readout flips at sampling",
+    "instance": {
+      "sizes": [
+        3,
+        3,
+        3
+      ],
+      "seed": 7100
+    },
+    "methods": [
+      "M1",
+      "M2",
+      "M3"
+    ],
+    "post_selection": "M1, M2: keep shots whose register Hamming weights are conserved",
+    "penalty_params": {
+      "M3": {
+        "A": 1.0
+      },
+      "note": "fixed for the noise study (not tuned)"
+    },
+    "trajectory_seed": 17,
+    "readout_seed": 23,
+    "training": "each method trained noiselessly on profile seeds; the seed with the highest noiseless P(optimum) is evaluated under noise",
+    "rule": "p2 = 0 is the fully noiseless reference (p1 = 0, no readout flips)"
+  },
+  "regression_targets": {
+    "_note": "Loader must reproduce manuscript Tables 1 and 2 within tolerance.",
+    "tlc_usd_t": {
+      "H1": 274.25,
+      "R1": 80.96,
+      "R2": 394.64,
+      "R3": 388.78,
+      "R4": 387.39
+    },
+    "emissions_kg_t": {
+      "H1": 62.87,
+      "R1": 7.66,
+      "R2": 22.36,
+      "R3": 13.33,
+      "R4": 11.19
+    },
+    "tolerance": 0.01
+  },
+  "statistics": {
+    "confidence": 0.95,
+    "bootstrap_resamples": 10000,
+    "bootstrap_seed": 0,
+    "tost_alpha": 0.05,
+    "wilcoxon": "two-sided signed-rank, zero_method 'zsplit'",
+    "holm": "Holm correction over all rows of each paired-test table",
+    "intervals": "Clopper-Pearson one-sided upper bound for violation rates; Wilson interval for survival; percentile bootstrap for medians"
+  },
+  "qiskit": {
+    "label": "A",
+    "purpose": "(1) cross-validate saved trained circuits of the numpy engine against Qiskit statevectors; (2) report transpiled circuit resources; (3) simulated noise with the Qiskit Aer noise model for Section 3.3",
+    "cross_validation": {
+      "sources": [
+        "3_1_steel_case",
+        "B_synthetic_suite",
+        "B_synthetic_suite_alpha1"
+      ],
+      "runs_per_group": 2,
+      "group": "source x size x method x depth p",
+      "max_qubits": 20,
+      "tolerance": 1e-08,
+      "compare": "P(optimum) and P(feasible) from exact probabilities at the saved trained angles"
+    },
+    "resources": {
+      "basis_gates": [
+        "cx",
+        "rz",
+        "sx",
+        "x"
+      ],
+      "optimization_level": 1,
+      "transpiler_seed": 0,
+      "angle_seed": 11,
+      "angle_range": [
+        0.1,
+        1.0
+      ],
+      "instances_per_size": 5,
+      "penalty_params": {
+        "M3": {
+          "A": 1.0
+        },
+        "M4": {
+          "lambda1": 1.0,
+          "lambda2": 1.0
+        }
+      },
+      "note": "layers only (state preparation excluded and stated); gate structure does not depend on the nonzero angle or penalty values",
+      "optimization_level_rule": "must be 0 or 1 (higher levels may permute qubits; enforced in code)"
+    },
+    "aer_noise": {
+      "simulator": "qiskit_aer.AerSimulator(method='statevector'): one trajectory per shot, noise on transpiled native gates",
+      "one_qubit_gates": [
+        "sx",
+        "x"
+      ],
+      "two_qubit_gates": [
+        "cx"
+      ],
+      "rz": "virtual, noiseless",
+      "parameter_rule": "Aer depolarizing_error takes the depolarizing parameter lambda; it is set to lambda = p * d^2 / (d^2 - 1) so that p is the probability of a non-identity Pauli error, as in noise.p1_depolarising / p2_depolarising_sweep",
+      "readout": "symmetric flip probability noise.readout_flip on every qubit",
+      "state_preparation": "ideal (initialize, noiseless), as in the trajectory simulation",
+      "simulator_seed": 29,
+      "rates": "noise.p1_depolarising, noise.p2_depolarising_sweep, noise.readout_flip",
+      "method": "statevector",
+      "model_difference": "trajectory model (Section 3.3): one error per logical two-qubit operation (RZZ, XY edge) and p1 after RZ/RX; Aer: p2 per native CX (RZZ ~ 2 CX, XY edge ~ 4 CX) and p1 per sx/x"
+    }
+  }
+}
